@@ -1,0 +1,7 @@
+--------------- Rebuild Started: 01/09/2019 19:21:49 Project: RC522.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/RC522.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c RC522.c -o .\CortexM3\ARM_GCC_541\Debug\RC522.o
+RC522.c: In function 'PCD_PerformSelfTest':
+RC522.c:253:23: warning: variable 'reference' set but not used [-Wunused-but-set-variable]
+  const unsigned char *reference;
+                       ^
+--------------- Rebuild Succeeded: 01/09/2019 19:21:50 ---------------

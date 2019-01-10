@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RC522\RFID\Source Files\main.c">
+<ExpandedNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\TopDesign</v>
+<v>RC522\RFID\RFID.cydwr\Pins</v>
+<v>RC522\RFID\RFID.cydwr\Analog</v>
+<v>RC522\RFID\RFID.cydwr\Clocks</v>
+<v>RC522\RFID\RFID.cydwr\Interrupts</v>
+<v>RC522\RFID\RFID.cydwr\DMA</v>
+<v>RC522\RFID\RFID.cydwr\System</v>
+<v>RC522\RFID\RFID.cydwr\Directives</v>
+<v>RC522\RFID\RFID.cydwr\Flash Security</v>
+<v>RC522\RFID\RFID.cydwr\EEPROM</v>
+<v>RC522\RFID\Header Files</v>
+<v>RC522\RFID\Header Files\cyapicallbacks.h</v>
+<v>RC522\RFID\RC522\RC522.c</v>
+<v>RC522\RFID\RC522\RC522.h</v>
+<v>RC522\RFID\Source Files</v>
+<v>RC522\RFID\Source Files\main.c</v>
+<v>RC522\RFID\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\TopDesign</v>
+<v>RC522\RFID\RFID.cydwr</v>
+<v>RC522\RFID\Header Files</v>
+<v>RC522\RFID\Header Files\cyapicallbacks.h</v>
+<v>RC522\RFID\RC522</v>
+<v>RC522\RFID\Source Files</v>
+<v>RC522\RFID\Source Files\main.c</v>
+<v>RC522\RFID\Generated_Source</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\TopDesign</v>
+<v>RC522\RFID\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\TopDesign</v>
+<v>RC522\RFID\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\CortexM3</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\RC522.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\RESET.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SCK.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_INT.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_IntClock.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_PM.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.elf</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.hex</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.map</v>
+<v>RC522\RFID\RFID.gpdsc</v>
+<v>RC522\RFID\RFID.rpt</v>
+<v>RC522\RFID\RFID_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\CortexM3</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\RC522.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\RESET.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SCK.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_INT.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_IntClock.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_PM.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.elf</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.hex</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.map</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\PSoC 5LP Architecture TRM</v>
+<v>RC522\RFID\CY8C58LP Family Datasheet</v>
+<v>RC522\RFID\System Reference Guides</v>
+<v>RC522\RFID\System Reference Guides\cy_boot_v5_70</v>
+<v>RC522\RFID\CharLCD_v2_20.pdf</v>
+<v>RC522\RFID\cy_constant_v1_0.pdf</v>
+<v>RC522\RFID\cy_pins_v2_20</v>
+<v>RC522\RFID\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>RC522\RFID\SPI_Master_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>RC522</v>
+<v>RC522\RFID</v>
+<v>RC522\RFID\PSoC 5LP Architecture TRM</v>
+<v>RC522\RFID\CY8C58LP Family Datasheet</v>
+<v>RC522\RFID\System Reference Guides</v>
+<v>RC522\RFID\System Reference Guides\cy_boot_v5_70</v>
+<v>RC522\RFID\CharLCD_v2_20.pdf</v>
+<v>RC522\RFID\cy_constant_v1_0.pdf</v>
+<v>RC522\RFID\cy_pins_v2_20</v>
+<v>RC522\RFID\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>RC522\RFID\SPI_Master_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

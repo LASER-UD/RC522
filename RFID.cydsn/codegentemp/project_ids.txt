@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|99e80a65-3972-4fa8-9d92-cf555accad0f
+C:\Users\nikod\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|d355f57b-48c7-4f7c-893e-8850b50d86ff
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e21dfb2b-2db4-4e06-acbf-567dc54e2f51
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|88e3ebeb-172d-4ed6-8a20-c905cce82627
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|328b099a-12d1-4de7-88ac-0d54229433b7
+C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\RFID.cyprj|140f0d00-aa96-427d-bb91-a5c67ad27bc2
