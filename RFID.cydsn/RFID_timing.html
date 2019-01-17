@@ -539,29 +539,29 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> RFID</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 01/09/19 19:37:09</td></tr>
+<td class="proptext"> 01/09/19 20:49:50</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C5888LTI-LP097</td></tr>
 <tr> <td class="prop"> Temperature :</td>
-<td class="proptext"> -40C - 85/125C</td></tr>
+<td class="proptext"> 0C - 85/125C</td></tr>
 <tr> <td class="prop"> VDDA :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDABUF :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDD :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO0 :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO1 :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO2 :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO3 :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VUSB :</td>
-<td class="proptext"> 5.00</td></tr>
+<td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> Voltage :</td>
-<td class="proptext"> 5.0</td></tr>
+<td class="proptext"> 3.3</td></tr>
 </table>
 <div>
 <a href="#" onclick="expandAllSections(1);return false;">Expand All</a> |
@@ -633,7 +633,7 @@ Clock Summary Section</span>
  <td class = "text_info">CyMASTER_CLK</td>
  <td class = "number">1.000&nbsp;MHz</td>
  <td class = "number">1.000&nbsp;MHz</td>
- <td class = "number">67.958&nbsp;MHz</td>
+ <td class = "number">75.896&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
@@ -686,92 +686,11 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">67.958&nbsp;MHz</td>
- <td class = "number">14.715</td>
- <td class = "number">985.285</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
- <td class = "number">1.940</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_0\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_4</td>
- <td class = "number">3.965</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_4</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">2.610</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">2.850</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_blk_stat_comb</td>
  <td class = "text_info">\SPI:BSPIM:RxStsReg\/status_6</td>
- <td class = "number">71.922&nbsp;MHz</td>
- <td class = "number">13.904</td>
- <td class = "number">986.096</td>
+ <td class = "number">75.896&nbsp;MHz</td>
+ <td class = "number">13.176</td>
+ <td class = "number">986.824</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -791,12 +710,12 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/clock</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_blk_stat_comb</td>
- <td class = "number">3.580</td>
+ <td class = "number">2.510</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -805,16 +724,16 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
  <td class = "text_info">\SPI:BSPIM:rx_status_4\</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_blk_stat_comb</td>
  <td class = "text_info">\SPI:BSPIM:rx_status_6\/main_5</td>
- <td class = "number">4.157</td>
+ <td class = "number">5.876</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">U(3,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:rx_status_6\</td>
  <td class = "text_info">\SPI:BSPIM:rx_status_6\/main_5</td>
  <td class = "text_info">\SPI:BSPIM:rx_status_6\/q</td>
- <td class = "number">3.350</td>
+ <td class = "number">2.345</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -823,16 +742,16 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
  <td class = "text_info">\SPI:BSPIM:rx_status_6\</td>
  <td class = "text_info">\SPI:BSPIM:rx_status_6\/q</td>
  <td class = "text_info">\SPI:BSPIM:RxStsReg\/status_6</td>
- <td class = "number">2.317</td>
+ <td class = "number">2.095</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell2</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(3,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:RxStsReg\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
- <td class = "number">0.500</td>
+ <td class = "number">0.350</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -848,11 +767,11 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">72.072&nbsp;MHz</td>
- <td class = "number">13.875</td>
- <td class = "number">986.125</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_8</td>
+ <td class = "number">88.873&nbsp;MHz</td>
+ <td class = "number">11.252</td>
+ <td class = "number">988.748</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -871,49 +790,31 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "number">1.940</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_3\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_1</td>
- <td class = "number">3.125</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">2.610</td>
-</tr>
-<tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/clock</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "number">2.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:tx_status_1\</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_8</td>
+ <td class = "number">6.285</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
- <td class = "number">2.850</td>
+ <td class = "number">2.457</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -929,11 +830,11 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">73.676&nbsp;MHz</td>
- <td class = "number">13.573</td>
- <td class = "number">986.427</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\SPI:BSPIM:state_1\/main_8</td>
+ <td class = "number">88.873&nbsp;MHz</td>
+ <td class = "number">11.252</td>
+ <td class = "number">988.748</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -952,130 +853,31 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "number">1.940</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_4\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_0</td>
- <td class = "number">2.823</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_0</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">2.610</td>
-</tr>
-<tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">2.850</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">74.800&nbsp;MHz</td>
- <td class = "number">13.369</td>
- <td class = "number">986.631</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "number">1.940</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/clock</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "number">2.510</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_2\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_2</td>
- <td class = "number">2.619</td>
+ <td class = "text_info">\SPI:BSPIM:tx_status_1\</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\SPI:BSPIM:state_1\/main_8</td>
+ <td class = "number">6.285</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell7</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_2</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">2.610</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
+ <td class = "text_info">\SPI:BSPIM:state_1\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
- <td class = "number">2.850</td>
+ <td class = "number">2.457</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -1093,9 +895,9 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 <tr> 
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">74.828&nbsp;MHz</td>
- <td class = "number">13.364</td>
- <td class = "number">986.636</td>
+ <td class = "number">92.073&nbsp;MHz</td>
+ <td class = "number">10.861</td>
+ <td class = "number">989.139</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1115,12 +917,12 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "number">1.940</td>
+ <td class = "number">1.360</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -1129,16 +931,16 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
  <td class = "text_info">\SPI:BSPIM:count_1\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_3</td>
- <td class = "number">2.614</td>
+ <td class = "number">2.729</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_3</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
+ <td class = "number">2.345</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -1147,178 +949,16 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
  <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
- <td class = "number">2.610</td>
+ <td class = "number">2.427</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
- <td class = "number">2.850</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
- <td class = "number">75.959&nbsp;MHz</td>
- <td class = "number">13.165</td>
- <td class = "number">986.835</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
- <td class = "number">1.940</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_0\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_4</td>
- <td class = "number">3.965</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_4</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
- <td class = "number">3.410</td>
-</tr>
-<tr> 
- <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">0.500</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
- <td class = "number">81.136&nbsp;MHz</td>
- <td class = "number">12.325</td>
- <td class = "number">987.675</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "number">1.940</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_3\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_1</td>
- <td class = "number">3.125</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
- <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
- <td class = "number">3.410</td>
-</tr>
-<tr> 
- <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">0.500</td>
+ <td class = "number">2.000</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -1335,10 +975,10 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 </tr>
 <tr> 
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
- <td class = "number">83.174&nbsp;MHz</td>
- <td class = "number">12.023</td>
- <td class = "number">987.977</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">93.223&nbsp;MHz</td>
+ <td class = "number">10.727</td>
+ <td class = "number">989.273</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1358,12 +998,12 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "number">1.940</td>
+ <td class = "number">1.360</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -1372,16 +1012,16 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
  <td class = "text_info">\SPI:BSPIM:count_4\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_0</td>
- <td class = "number">2.823</td>
+ <td class = "number">2.595</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_0</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "number">3.350</td>
+ <td class = "number">2.345</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -1389,17 +1029,17 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
  <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
- <td class = "number">3.410</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">2.427</td>
 </tr>
 <tr> 
- <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:TxStsReg\</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
- <td class = "number">0.500</td>
+ <td class = "number">2.000</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -1416,10 +1056,10 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 </tr>
 <tr> 
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "text_info">\SPI:BSPIM:RxStsReg\/status_6</td>
- <td class = "number">83.465&nbsp;MHz</td>
- <td class = "number">11.981</td>
- <td class = "number">988.019</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">93.231&nbsp;MHz</td>
+ <td class = "number">10.726</td>
+ <td class = "number">989.274</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1439,12 +1079,12 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "number">1.940</td>
+ <td class = "number">1.360</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -1452,35 +1092,341 @@ Destination Clock : SPI_IntClock : Positive edge(Required Frequency 1&nbsp;MHz)<
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:count_3\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
- <td class = "text_info">\SPI:BSPIM:rx_status_6\/main_1</td>
- <td class = "number">3.874</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_1</td>
+ <td class = "number">2.594</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">macrocell1</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:rx_status_6\</td>
- <td class = "text_info">\SPI:BSPIM:rx_status_6\/main_1</td>
- <td class = "text_info">\SPI:BSPIM:rx_status_6\/q</td>
- <td class = "number">3.350</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "number">2.345</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:rx_status_6\</td>
- <td class = "text_info">\SPI:BSPIM:rx_status_6\/q</td>
- <td class = "text_info">\SPI:BSPIM:RxStsReg\/status_6</td>
- <td class = "number">2.317</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">2.427</td>
 </tr>
 <tr> 
- <td class = "text_info">statusicell2</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:RxStsReg\</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
- <td class = "number">0.500</td>
+ <td class = "number">2.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">93.301&nbsp;MHz</td>
+ <td class = "number">10.718</td>
+ <td class = "number">989.282</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
+ <td class = "number">1.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:count_2\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_2</td>
+ <td class = "number">2.586</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell1</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_2</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "number">2.345</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">2.427</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">94.733&nbsp;MHz</td>
+ <td class = "number">10.556</td>
+ <td class = "number">989.444</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "number">1.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:count_0\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_4</td>
+ <td class = "number">2.424</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell1</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_4</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "number">2.345</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f1_load</td>
+ <td class = "number">2.427</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/main_3</td>
+ <td class = "number">99.631&nbsp;MHz</td>
+ <td class = "number">10.037</td>
+ <td class = "number">989.963</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/clock</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "number">2.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:tx_status_1\</td>
+ <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/main_3</td>
+ <td class = "number">5.070</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(2,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.457</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
+ <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
+ <td class = "number">100.351&nbsp;MHz</td>
+ <td class = "number">9.965</td>
+ <td class = "number">990.035</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
+ <td class = "number">1.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:count_1\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_3</td>
+ <td class = "number">2.729</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell1</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/main_3</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "number">2.345</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\</td>
+ <td class = "text_info">\SPI:BSPIM:load_rx_data\/q</td>
+ <td class = "text_info">\SPI:BSPIM:TxStsReg\/status_3</td>
+ <td class = "number">3.181</td>
+</tr>
+<tr> 
+ <td class = "text_info">statusicell1</td>
+ <td class = "text_info">U(2,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:TxStsReg\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">0.350</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -1532,9 +1478,9 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">\SPI:BSPIM:state_2\/main_6</td>
- <td class = "number">3.225</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_7</td>
+ <td class = "number">2.849</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1554,25 +1500,25 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "number">0.620</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "number">0.430</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_1\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">\SPI:BSPIM:state_2\/main_6</td>
- <td class = "number">2.605</td>
+ <td class = "text_info">\SPI:BSPIM:count_0\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_7</td>
+ <td class = "number">2.419</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:state_2\</td>
  <td class = "text_info"> </td>
@@ -1593,9 +1539,9 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">\SPI:BSPIM:state_1\/main_6</td>
- <td class = "number">3.225</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:state_1\/main_7</td>
+ <td class = "number">2.849</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1615,25 +1561,25 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "number">0.620</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "number">0.430</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_1\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">\SPI:BSPIM:state_1\/main_6</td>
- <td class = "number">2.605</td>
+ <td class = "text_info">\SPI:BSPIM:count_0\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:state_1\/main_7</td>
+ <td class = "number">2.419</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:state_1\</td>
  <td class = "text_info"> </td>
@@ -1654,9 +1600,9 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">\SPI:BSPIM:ld_ident\/main_6</td>
- <td class = "number">3.225</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:ld_ident\/main_7</td>
+ <td class = "number">2.849</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1676,25 +1622,25 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "number">0.620</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "number">0.430</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_1\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">\SPI:BSPIM:ld_ident\/main_6</td>
- <td class = "number">2.605</td>
+ <td class = "text_info">\SPI:BSPIM:count_0\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">\SPI:BSPIM:ld_ident\/main_7</td>
+ <td class = "number">2.419</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:ld_ident\</td>
  <td class = "text_info"> </td>
@@ -1715,9 +1661,9 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:state_2\/main_5</td>
- <td class = "number">3.230</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">Net_1/main_9</td>
+ <td class = "number">2.854</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1737,25 +1683,208 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "number">0.620</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "number">0.430</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_2\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:state_2\/main_5</td>
- <td class = "number">2.610</td>
+ <td class = "text_info">\SPI:BSPIM:count_0\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_0</td>
+ <td class = "text_info">Net_1/main_9</td>
+ <td class = "number">2.424</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell5</td>
+ <td class = "text_info">U(3,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_3/q</td>
+ <td class = "text_info">Net_3/main_3</td>
+ <td class = "number">2.953</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(2,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_3</td>
+ <td class = "text_info">Net_3/clock_0</td>
+ <td class = "text_info">Net_3/q</td>
+ <td class = "number">0.875</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(2,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_3</td>
+ <td class = "text_info">Net_3/q</td>
+ <td class = "text_info">Net_3/main_3</td>
+ <td class = "number">2.078</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(2,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_3</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\SPI:BSPIM:load_cond\/q</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\/main_8</td>
+ <td class = "number">2.957</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(3,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\/clock_0</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\/q</td>
+ <td class = "number">0.875</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(3,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\/q</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\/main_8</td>
+ <td class = "number">2.082</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(3,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:load_cond\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_2</td>
+ <td class = "number">2.980</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(2,5)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/clock_0</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "number">0.875</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_2</td>
+ <td class = "number">2.105</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:state_2\</td>
  <td class = "text_info"> </td>
@@ -1776,9 +1905,9 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:state_1\/main_5</td>
- <td class = "number">3.230</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "text_info">\SPI:BSPIM:state_1\/main_2</td>
+ <td class = "number">2.980</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1797,26 +1926,26 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(2,5)</td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "number">0.620</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/clock_0</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "number">0.875</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_2\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:state_1\/main_5</td>
- <td class = "number">2.610</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "text_info">\SPI:BSPIM:state_1\/main_2</td>
+ <td class = "number">2.105</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:state_1\</td>
  <td class = "text_info"> </td>
@@ -1837,9 +1966,9 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:ld_ident\/main_5</td>
- <td class = "number">3.230</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "text_info">\SPI:BSPIM:ld_ident\/main_2</td>
+ <td class = "number">2.980</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1858,26 +1987,26 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(2,5)</td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "number">0.620</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/clock_0</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "number">0.875</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_2\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">\SPI:BSPIM:ld_ident\/main_5</td>
- <td class = "number">2.610</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\</td>
+ <td class = "text_info">\SPI:BSPIM:state_0\/q</td>
+ <td class = "text_info">\SPI:BSPIM:ld_ident\/main_2</td>
+ <td class = "number">2.105</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:ld_ident\</td>
  <td class = "text_info"> </td>
@@ -1898,9 +2027,9 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">Net_1/main_8</td>
- <td class = "number">3.234</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_4</td>
+ <td class = "number">2.999</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1920,210 +2049,27 @@ Destination Clock : SPI_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
  <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "number">0.620</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
+ <td class = "number">0.430</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_1\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_1</td>
- <td class = "text_info">Net_1/main_8</td>
- <td class = "number">2.614</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">Net_1/main_7</td>
- <td class = "number">3.239</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_2\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_2</td>
- <td class = "text_info">Net_1/main_7</td>
- <td class = "number">2.619</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "text_info">\SPI:BSPIM:state_2\/main_3</td>
- <td class = "number">3.414</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_4\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "text_info">\SPI:BSPIM:state_2\/main_3</td>
- <td class = "number">2.794</td>
+ <td class = "text_info">\SPI:BSPIM:count_3\</td>
+ <td class = "text_info">\SPI:BSPIM:BitCounter\/count_3</td>
+ <td class = "text_info">\SPI:BSPIM:state_2\/main_4</td>
+ <td class = "number">2.569</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:state_2\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "text_info">\SPI:BSPIM:state_1\/main_3</td>
- <td class = "number">3.414</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/clock</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:count_4\</td>
- <td class = "text_info">\SPI:BSPIM:BitCounter\/count_4</td>
- <td class = "text_info">\SPI:BSPIM:state_1\/main_3</td>
- <td class = "number">2.794</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\SPI:BSPIM:state_1\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -2175,7 +2121,7 @@ SPI_IntClock</span>
 <tr> 
  <td class = "text_info">MISO(0)_PAD</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/route_si</td>
- <td class = "number">16.674</td>
+ <td class = "number">15.834</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2203,12 +2149,12 @@ SPI_IntClock</span>
 </tr>
 <tr> 
  <td class = "text_info">iocell1</td>
- <td class = "text_info">P1[2]</td>
+ <td class = "text_info">P0[6]</td>
  <td class = "number">1</td>
  <td class = "text_info">MISO(0)</td>
  <td class = "text_info">MISO(0)/pad_in</td>
  <td class = "text_info">MISO(0)/fb</td>
- <td class = "number">7.479</td>
+ <td class = "number">7.354</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -2217,16 +2163,16 @@ SPI_IntClock</span>
  <td class = "text_info">Net_4</td>
  <td class = "text_info">MISO(0)/fb</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\/route_si</td>
- <td class = "number">5.695</td>
+ <td class = "number">6.030</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">\SPI:BSPIM:sR8:Dp:u0\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">SETUP</td>
- <td class = "number">3.500</td>
+ <td class = "number">2.450</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -2271,7 +2217,7 @@ SPI_IntClock</span>
 <tr> 
  <td class = "text_info">Net_3/q</td>
  <td class = "text_info">SDA(0)_PAD</td>
- <td class = "number">23.429</td>
+ <td class = "number">22.103</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2290,12 +2236,12 @@ SPI_IntClock</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(2,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_3</td>
  <td class = "text_info">Net_3/clock_0</td>
  <td class = "text_info">Net_3/q</td>
- <td class = "number">1.250</td>
+ <td class = "number">0.875</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -2304,16 +2250,16 @@ SPI_IntClock</span>
  <td class = "text_info">Net_3</td>
  <td class = "text_info">Net_3/q</td>
  <td class = "text_info">SDA(0)/pin_input</td>
- <td class = "number">6.837</td>
+ <td class = "number">5.484</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell4</td>
- <td class = "text_info">P1[5]</td>
+ <td class = "text_info">P0[3]</td>
  <td class = "number">1</td>
  <td class = "text_info">SDA(0)</td>
  <td class = "text_info">SDA(0)/pin_input</td>
  <td class = "text_info">SDA(0)/pad_out</td>
- <td class = "number">15.342</td>
+ <td class = "number">15.744</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -2322,75 +2268,6 @@ SPI_IntClock</span>
  <td class = "text_info">SDA(0)_PAD</td>
  <td class = "text_info">SDA(0)/pad_out</td>
  <td class = "text_info">SDA(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2/q</td>
- <td class = "text_info">SCK(0)_PAD</td>
- <td class = "number">23.245</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2</td>
- <td class = "text_info">Net_2/clock_0</td>
- <td class = "text_info">Net_2/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2</td>
- <td class = "text_info">Net_2/q</td>
- <td class = "text_info">SCK(0)/pin_input</td>
- <td class = "number">6.924</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell3</td>
- <td class = "text_info">P1[6]</td>
- <td class = "number">1</td>
- <td class = "text_info">SCK(0)</td>
- <td class = "text_info">SCK(0)/pin_input</td>
- <td class = "text_info">SCK(0)/pad_out</td>
- <td class = "number">15.071</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">SCK(0)_PAD</td>
- <td class = "text_info">SCK(0)/pad_out</td>
- <td class = "text_info">SCK(0)_PAD</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 
@@ -2409,7 +2286,7 @@ SPI_IntClock</span>
 <tr> 
  <td class = "text_info">Net_1/q</td>
  <td class = "text_info">MOSI(0)_PAD</td>
- <td class = "number">23.239</td>
+ <td class = "number">22.041</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2428,12 +2305,12 @@ SPI_IntClock</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(3,5)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1</td>
  <td class = "text_info">Net_1/clock_0</td>
  <td class = "text_info">Net_1/q</td>
- <td class = "number">1.250</td>
+ <td class = "number">0.875</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -2442,16 +2319,16 @@ SPI_IntClock</span>
  <td class = "text_info">Net_1</td>
  <td class = "text_info">Net_1/q</td>
  <td class = "text_info">MOSI(0)/pin_input</td>
- <td class = "number">6.608</td>
+ <td class = "number">6.143</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell2</td>
- <td class = "text_info">P1[7]</td>
+ <td class = "text_info">P0[5]</td>
  <td class = "number">1</td>
  <td class = "text_info">MOSI(0)</td>
  <td class = "text_info">MOSI(0)/pin_input</td>
  <td class = "text_info">MOSI(0)/pad_out</td>
- <td class = "number">15.381</td>
+ <td class = "number">15.023</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -2460,6 +2337,75 @@ SPI_IntClock</span>
  <td class = "text_info">MOSI(0)_PAD</td>
  <td class = "text_info">MOSI(0)/pad_out</td>
  <td class = "text_info">MOSI(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_2/q</td>
+ <td class = "text_info">SCK(0)_PAD</td>
+ <td class = "number">21.538</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(3,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2</td>
+ <td class = "text_info">Net_2/clock_0</td>
+ <td class = "text_info">Net_2/q</td>
+ <td class = "number">0.875</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2</td>
+ <td class = "text_info">Net_2/q</td>
+ <td class = "text_info">SCK(0)/pin_input</td>
+ <td class = "number">5.783</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell3</td>
+ <td class = "text_info">P0[4]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">SCK(0)</td>
+ <td class = "text_info">SCK(0)/pin_input</td>
+ <td class = "text_info">SCK(0)/pad_out</td>
+ <td class = "number">14.880</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">SCK(0)_PAD</td>
+ <td class = "text_info">SCK(0)/pad_out</td>
+ <td class = "text_info">SCK(0)_PAD</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 

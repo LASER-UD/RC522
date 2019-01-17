@@ -4,3 +4,4 @@ C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomp
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|88e3ebeb-172d-4ed6-8a20-c905cce82627
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|328b099a-12d1-4de7-88ac-0d54229433b7
 C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\RFID.cyprj|140f0d00-aa96-427d-bb91-a5c67ad27bc2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|1a9f01d6-62a8-4968-91d4-2826066e00d6

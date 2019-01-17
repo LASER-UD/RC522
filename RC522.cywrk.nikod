@@ -13,11 +13,12 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RC522\RFID\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>RC522</v>
 <v>RC522\RFID</v>
 <v>RC522\RFID\TopDesign</v>
+<v>RC522\RFID\RFID.cydwr</v>
 <v>RC522\RFID\RFID.cydwr\Pins</v>
 <v>RC522\RFID\RFID.cydwr\Analog</v>
 <v>RC522\RFID\RFID.cydwr\Clocks</v>
@@ -40,6 +41,15 @@
 <v>RC522\RFID</v>
 <v>RC522\RFID\TopDesign</v>
 <v>RC522\RFID\RFID.cydwr</v>
+<v>RC522\RFID\RFID.cydwr\Pins</v>
+<v>RC522\RFID\RFID.cydwr\Analog</v>
+<v>RC522\RFID\RFID.cydwr\Clocks</v>
+<v>RC522\RFID\RFID.cydwr\Interrupts</v>
+<v>RC522\RFID\RFID.cydwr\DMA</v>
+<v>RC522\RFID\RFID.cydwr\System</v>
+<v>RC522\RFID\RFID.cydwr\Directives</v>
+<v>RC522\RFID\RFID.cydwr\Flash Security</v>
+<v>RC522\RFID\RFID.cydwr\EEPROM</v>
 <v>RC522\RFID\Header Files</v>
 <v>RC522\RFID\Header Files\cyapicallbacks.h</v>
 <v>RC522\RFID\RC522</v>
@@ -81,6 +91,9 @@
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI.lst</v>
@@ -117,6 +130,9 @@
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI.lst</v>
@@ -128,9 +144,6 @@
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_INT.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_IntClock.lst</v>
 <v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_PM.lst</v>
-<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.elf</v>
-<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.hex</v>
-<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\RFID.map</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -172,7 +185,19 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\RFID.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\RFID.cydsn\RC522.h" />
+<name v=".\RFID.cydsn\RC522.c" />
+<name v=".\RFID.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1007, 409" SelectedTabbedMdiWindow="69617468-21c8-4ecb-9154-27947047ef64"><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\TopDesign\TopDesign.cysch" Guid="0ec7ab2b-3d35-4be0-a7cc-955cfbd2faa4" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\RC522.h" Guid="69617468-21c8-4ecb-9154-27947047ef64" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\RC522.c" Guid="4094493b-b73d-4cec-b61f-aeac4e8fdff3" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\main.c" Guid="2eb52bf5-fa61-4b82-8ea8-15e6cf435fd6" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -7,7 +7,7 @@
 #include <stdbool.h>
 #include <stddef.h>    
     
-    
+/*    
 const unsigned char MFRC522_firmware_referenceV0_0[] = {
 	0x00, 0x87, 0x98, 0x0f, 0x49, 0xFF, 0x07, 0x19,
 	0xBF, 0x22, 0x30, 0x49, 0x59, 0x63, 0xAD, 0xCA,
@@ -54,7 +54,7 @@ const unsigned char FM17522_firmware_reference[] = {
 	0x51, 0x64, 0xAB, 0x3E, 0xE9, 0x15, 0xB5, 0xAB,
 	0x56, 0x9A, 0x98, 0x82, 0x26, 0xEA, 0x2A, 0x62
 };    
-
+*/
 typedef struct {
 		unsigned char		size;			// Number of bytes in the UID. 4, 7 or 10.
 		unsigned char		uidByte[10];
@@ -315,7 +315,6 @@ unsigned char PCD_TransceiveData(	unsigned char *sendData,		///< Pointer to the 
     bool PICC_ReadCardSerial(void);
 #ifdef	__cplusplus
 }
-
 #endif /* __cplusplus */
 
 #endif // _RC522_H_
