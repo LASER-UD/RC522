@@ -37,7 +37,7 @@ void PCD_WriteRegisters( unsigned char addr,unsigned char count,unsigned char *v
 unsigned char PCD_ReadRegister(unsigned char addr) {
         unsigned char value;
         //SS = false;
-        while ( ! (SPI_ReadTxStatus() & SPI_STS_SPI_IDLE) );//Espera a que el canal este disponible
+        while (!(SPI_ReadTxStatus()&SPI_STS_SPI_IDLE));//Espera a que el canal este disponible
         SPI_WriteTxData(((addr<<1)&0x7E)|0x80);// Equivalente a SPI.transfer(((addr<<1)&0x7E) | 0x80);
         while ( ! (SPI_ReadTxStatus() & SPI_STS_SPI_IDLE) );
         SPI_WriteTxData(0x00); // Equivalente a val = SPI.transfer(0x00);
@@ -140,7 +140,6 @@ void PCD_Init(void) {
     //SS = true;
     //rst entrada
     if (RESET_Read() == 0) {      
-    
     RESET_Write(0);		// Make shure we have a clean LOW state.
     CyDelayUs(20);				// 8.8.1 Reset timing requirements says about 100ns. Let us be generous: 2?sl
     RESET_Write(1); // Exit power down mode. This triggers a hard reset.
@@ -162,7 +161,6 @@ void PCD_Init(void) {
 	PCD_WriteRegister(TPrescalerReg, 0xA9);		// TPreScaler = TModeReg[3..0]:TPrescalerReg, ie 0x0A9 = 169 => f_timer=40kHz, ie a timer period of 25?s.
 	PCD_WriteRegister(TReloadRegH, 0x03);		// Reload timer with 0x3E8 = 1000, ie 25ms before timeout.
 	PCD_WriteRegister(TReloadRegL, 0xE8);
-	
 	PCD_WriteRegister(TxASKReg, 0x40);		// Default 0x00. Force a 100 % ASK modulation independent of the ModGsPReg register setting
 	PCD_WriteRegister(ModeReg, 0x3D);		// Default 0x3F. Set the preset value for the CRC coprocessor for the CalcCRC command to 0x6363 (ISO 14443-3 part 6.2.4)
 	PCD_AntennaOn();						// Enable the antenna driver pins TX1 and TX2 (they were disabled by the reset)
