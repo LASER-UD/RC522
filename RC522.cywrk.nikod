@@ -30,6 +30,7 @@
 <v>RC522\RFID\RFID.cydwr\EEPROM</v>
 <v>RC522\RFID\Header Files</v>
 <v>RC522\RFID\Header Files\cyapicallbacks.h</v>
+<v>RC522\RFID\RC522</v>
 <v>RC522\RFID\RC522\RC522.c</v>
 <v>RC522\RFID\RC522\RC522.h</v>
 <v>RC522\RFID\Source Files</v>
@@ -53,12 +54,14 @@
 <v>RC522\RFID\Header Files</v>
 <v>RC522\RFID\Header Files\cyapicallbacks.h</v>
 <v>RC522\RFID\RC522</v>
+<v>RC522\RFID\RC522\RC522.c</v>
+<v>RC522\RFID\RC522\RC522.h</v>
 <v>RC522\RFID\Source Files</v>
 <v>RC522\RFID\Source Files\main.c</v>
 <v>RC522\RFID\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RC522">
 <ExpandedNodeIds>
 <v>RC522</v>
 <v>RC522\RFID</v>
@@ -72,7 +75,7 @@
 <v>RC522\RFID\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RC522">
 <ExpandedNodeIds>
 <v>RC522</v>
 <v>RC522\RFID</v>
@@ -115,6 +118,35 @@
 <VisibleNodeIds>
 <v>RC522</v>
 <v>RC522\RFID</v>
+<v>RC522\RFID\CortexM3</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\RC522.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\RESET.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SCK.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_INT.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_IntClock.lst</v>
+<v>RC522\RFID\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -122,7 +154,7 @@
 <v>Datasheet</v>
 </TreeKeysV2>
 <TreeStatesV2>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="RC522">
 <ExpandedNodeIds>
 <v>RC522</v>
 <v>RC522\RFID</v>
@@ -160,6 +192,7 @@
 <name v=".\RFID.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\RFID.cydsn\main.c" />
 <name v=".\RFID.cydsn\RFID.cydwr" />
+<name v=".\RFID.cydsn\RC522.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -167,7 +200,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="858, 409" SelectedTabbedMdiWindow="0ec7ab2b-3d35-4be0-a7cc-955cfbd2faa4"><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\TopDesign\TopDesign.cysch" Guid="0ec7ab2b-3d35-4be0-a7cc-955cfbd2faa4" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\main.c" Guid="2eb52bf5-fa61-4b82-8ea8-15e6cf435fd6" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\RFID.cydwr" Guid="97474159-8fb1-4055-a5fa-29c072ba7ecc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="836, 409" SelectedTabbedMdiWindow="febd0c10-24e5-4f13-bc53-52523d3eeaff"><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\TopDesign\TopDesign.cysch" Guid="0ec7ab2b-3d35-4be0-a7cc-955cfbd2faa4" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\main.c" Guid="2eb52bf5-fa61-4b82-8ea8-15e6cf435fd6" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\RFID.cydwr" Guid="97474159-8fb1-4055-a5fa-29c072ba7ecc" /><DocumentWindow Key="C:\Users\nikod\Documents\PSoC Creator\RC522\RFID.cydsn\RC522.c" Guid="febd0c10-24e5-4f13-bc53-52523d3eeaff" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4135072b-1754-4e5d-9fa2-a5f92d2695ae" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

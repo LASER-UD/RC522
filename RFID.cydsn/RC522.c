@@ -137,8 +137,10 @@ unsigned char  PCD_CalculateCRC(	unsigned char *data,		///< In: Pointer to the d
 void PCD_Init(void) {
 	// Set the chipSelectPin as digital output, do not select the slave yet
     bool hardReset;
+    SPI_Start();
     //SS = true;
     //rst entrada
+    
     if (RESET_Read() == 0) {      
     RESET_Write(0);		// Make shure we have a clean LOW state.
     CyDelayUs(20);				// 8.8.1 Reset timing requirements says about 100ns. Let us be generous: 2?sl

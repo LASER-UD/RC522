@@ -1,5 +1,5 @@
 -- Project:   RFID
--- Generated: 01/19/2019 00:14:38
+-- Generated: 01/31/2019 13:46:56
 -- PSoC Creator  4.2
 
 ENTITY RFID IS
@@ -16,14 +16,14 @@ ENTITY RFID IS
         \LCD:LCDPort(4)_PAD\ : OUT std_ulogic;
         \LCD:LCDPort(5)_PAD\ : OUT std_ulogic;
         \LCD:LCDPort(6)_PAD\ : OUT std_ulogic);
-    ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDIO0 OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDIO1 OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDIO2 OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDIO3 OF __DEFAULT__ : ENTITY IS 3.3e0;
+    ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO0 OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO1 OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO2 OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO3 OF __DEFAULT__ : ENTITY IS 5e0;
 END RFID;
 
 ARCHITECTURE __DEFAULT__ OF RFID IS
@@ -41,13 +41,13 @@ ARCHITECTURE __DEFAULT__ OF RFID IS
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL MISO(0)__PA : bit;
     SIGNAL MOSI(0)__PA : bit;
-    SIGNAL Net_1 : bit;
-    ATTRIBUTE placement_force OF Net_1 : SIGNAL IS "U(3,5,A)0";
-    SIGNAL Net_2 : bit;
-    ATTRIBUTE placement_force OF Net_2 : SIGNAL IS "U(3,4,B)1";
-    SIGNAL Net_3 : bit;
-    ATTRIBUTE placement_force OF Net_3 : SIGNAL IS "U(2,4,A)0";
+    SIGNAL Net_39 : bit;
+    ATTRIBUTE placement_force OF Net_39 : SIGNAL IS "U(0,2,B)1";
     SIGNAL Net_4 : bit;
+    SIGNAL Net_40 : bit;
+    ATTRIBUTE placement_force OF Net_40 : SIGNAL IS "U(1,2,A)0";
+    SIGNAL Net_42 : bit;
+    ATTRIBUTE placement_force OF Net_42 : SIGNAL IS "U(0,1,A)0";
     SIGNAL RESET(0)__PA : bit;
     SIGNAL SCK(0)__PA : bit;
     SIGNAL SDA(0)__PA : bit;
@@ -59,7 +59,7 @@ ARCHITECTURE __DEFAULT__ OF RFID IS
     SIGNAL \\\LCD:LCDPort(5)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(6)\\__PA\ : bit;
     SIGNAL \SPI:BSPIM:cnt_enable\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:cnt_enable\ : SIGNAL IS "U(3,4,B)0";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:cnt_enable\ : SIGNAL IS "U(0,2,B)0";
     SIGNAL \SPI:BSPIM:cnt_tc\ : bit;
     SIGNAL \SPI:BSPIM:count_0\ : bit;
     SIGNAL \SPI:BSPIM:count_1\ : bit;
@@ -69,28 +69,28 @@ ARCHITECTURE __DEFAULT__ OF RFID IS
     SIGNAL \SPI:BSPIM:count_5\ : bit;
     SIGNAL \SPI:BSPIM:count_6\ : bit;
     SIGNAL \SPI:BSPIM:ld_ident\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:ld_ident\ : SIGNAL IS "U(3,5,B)2";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:ld_ident\ : SIGNAL IS "U(0,1,B)2";
     SIGNAL \SPI:BSPIM:load_cond\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:load_cond\ : SIGNAL IS "U(3,4,A)0";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:load_cond\ : SIGNAL IS "U(0,2,A)0";
     SIGNAL \SPI:BSPIM:load_rx_data\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:load_rx_data\ : SIGNAL IS "U(3,5,A)1";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:load_rx_data\ : SIGNAL IS "U(0,1,A)1";
     SIGNAL \SPI:BSPIM:mosi_from_dp\ : bit;
     SIGNAL \SPI:BSPIM:rx_status_4\ : bit;
     SIGNAL \SPI:BSPIM:rx_status_5\ : bit;
     SIGNAL \SPI:BSPIM:rx_status_6\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:rx_status_6\ : SIGNAL IS "U(3,4,A)2";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:rx_status_6\ : SIGNAL IS "U(0,2,A)2";
     SIGNAL \SPI:BSPIM:state_0\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:state_0\ : SIGNAL IS "U(2,5,B)1";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:state_0\ : SIGNAL IS "U(0,2,A)1";
     SIGNAL \SPI:BSPIM:state_1\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:state_1\ : SIGNAL IS "U(3,5,B)0";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:state_1\ : SIGNAL IS "U(0,1,B)0";
     SIGNAL \SPI:BSPIM:state_2\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:state_2\ : SIGNAL IS "U(3,5,B)1";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:state_2\ : SIGNAL IS "U(0,1,B)1";
     SIGNAL \SPI:BSPIM:tx_status_0\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:tx_status_0\ : SIGNAL IS "U(3,5,A)2";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:tx_status_0\ : SIGNAL IS "U(0,1,A)2";
     SIGNAL \SPI:BSPIM:tx_status_1\ : bit;
     SIGNAL \SPI:BSPIM:tx_status_2\ : bit;
     SIGNAL \SPI:BSPIM:tx_status_4\ : bit;
-    ATTRIBUTE placement_force OF \SPI:BSPIM:tx_status_4\ : SIGNAL IS "U(3,5,A)3";
+    ATTRIBUTE placement_force OF \SPI:BSPIM:tx_status_4\ : SIGNAL IS "U(0,1,A)3";
     SIGNAL \SPI:Net_276\ : bit;
     ATTRIBUTE udbclken_assigned OF \SPI:Net_276\ : SIGNAL IS "True";
     ATTRIBUTE global_signal OF \SPI:Net_276\ : SIGNAL IS true;
@@ -105,15 +105,15 @@ ARCHITECTURE __DEFAULT__ OF RFID IS
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF MISO(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF MISO(0) : LABEL IS "P0[6]";
+    ATTRIBUTE Location OF MISO(0) : LABEL IS "P1[4]";
     ATTRIBUTE lib_model OF MOSI(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF MOSI(0) : LABEL IS "P0[5]";
+    ATTRIBUTE Location OF MOSI(0) : LABEL IS "P1[5]";
     ATTRIBUTE lib_model OF SCK(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF SCK(0) : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF SCK(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF SDA(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF SDA(0) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF SDA(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF RESET(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF RESET(0) : LABEL IS "P0[7]";
+    ATTRIBUTE Location OF RESET(0) : LABEL IS "P1[2]";
     ATTRIBUTE lib_model OF \LCD:LCDPort(0)\ : LABEL IS "iocell6";
     ATTRIBUTE Location OF \LCD:LCDPort(0)\ : LABEL IS "P12[0]";
     ATTRIBUTE lib_model OF \LCD:LCDPort(1)\ : LABEL IS "iocell7";
@@ -129,38 +129,38 @@ ARCHITECTURE __DEFAULT__ OF RFID IS
     ATTRIBUTE lib_model OF \LCD:LCDPort(6)\ : LABEL IS "iocell12";
     ATTRIBUTE Location OF \LCD:LCDPort(6)\ : LABEL IS "P12[6]";
     ATTRIBUTE lib_model OF \SPI:BSPIM:load_rx_data\ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF \SPI:BSPIM:load_rx_data\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:load_rx_data\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:tx_status_0\ : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF \SPI:BSPIM:tx_status_0\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:tx_status_0\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:tx_status_4\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \SPI:BSPIM:tx_status_4\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:tx_status_4\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:rx_status_6\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \SPI:BSPIM:rx_status_6\ : LABEL IS "U(3,4)";
-    ATTRIBUTE Location OF \SPI:BSPIM:BitCounter\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:rx_status_6\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \SPI:BSPIM:BitCounter\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:TxStsReg\ : LABEL IS "statusicell1";
-    ATTRIBUTE Location OF \SPI:BSPIM:TxStsReg\ : LABEL IS "U(2,4)";
+    ATTRIBUTE Location OF \SPI:BSPIM:TxStsReg\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:RxStsReg\ : LABEL IS "statusicell2";
-    ATTRIBUTE Location OF \SPI:BSPIM:RxStsReg\ : LABEL IS "U(3,4)";
+    ATTRIBUTE Location OF \SPI:BSPIM:RxStsReg\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:sR8:Dp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \SPI:BSPIM:sR8:Dp:u0\ : LABEL IS "U(3,5)";
-    ATTRIBUTE lib_model OF Net_1 : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF Net_1 : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:sR8:Dp:u0\ : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF Net_42 : LABEL IS "macrocell5";
+    ATTRIBUTE Location OF Net_42 : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:state_2\ : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF \SPI:BSPIM:state_2\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:state_2\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:state_1\ : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF \SPI:BSPIM:state_1\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:state_1\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:state_0\ : LABEL IS "macrocell8";
-    ATTRIBUTE Location OF \SPI:BSPIM:state_0\ : LABEL IS "U(2,5)";
-    ATTRIBUTE lib_model OF Net_3 : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF Net_3 : LABEL IS "U(2,4)";
+    ATTRIBUTE Location OF \SPI:BSPIM:state_0\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF Net_39 : LABEL IS "macrocell9";
+    ATTRIBUTE Location OF Net_39 : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:load_cond\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \SPI:BSPIM:load_cond\ : LABEL IS "U(3,4)";
+    ATTRIBUTE Location OF \SPI:BSPIM:load_cond\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:ld_ident\ : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF \SPI:BSPIM:ld_ident\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \SPI:BSPIM:ld_ident\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \SPI:BSPIM:cnt_enable\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \SPI:BSPIM:cnt_enable\ : LABEL IS "U(3,4)";
-    ATTRIBUTE lib_model OF Net_2 : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF Net_2 : LABEL IS "U(3,4)";
+    ATTRIBUTE Location OF \SPI:BSPIM:cnt_enable\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF Net_40 : LABEL IS "macrocell13";
+    ATTRIBUTE Location OF Net_40 : LABEL IS "U(1,2)";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -636,7 +636,7 @@ BEGIN
         PORT MAP(
             pa_out => MOSI(0)__PA,
             oe => open,
-            pin_input => Net_1,
+            pin_input => Net_42,
             pad_out => MOSI(0)_PAD,
             pad_in => MOSI(0)_PAD,
             in_clock => open,
@@ -728,7 +728,7 @@ BEGIN
         PORT MAP(
             pa_out => SCK(0)__PA,
             oe => open,
-            pin_input => Net_2,
+            pin_input => Net_40,
             pad_out => SCK(0)_PAD,
             pad_in => SCK(0)_PAD,
             in_clock => open,
@@ -820,7 +820,7 @@ BEGIN
         PORT MAP(
             pa_out => SDA(0)__PA,
             oe => open,
-            pin_input => Net_3,
+            pin_input => Net_39,
             pad_out => SDA(0)_PAD,
             pad_in => SDA(0)_PAD,
             in_clock => open,
@@ -1270,16 +1270,16 @@ BEGIN
             f1_blk_stat_comb => \SPI:BSPIM:rx_status_4\,
             busclk => ClockBlock_BUS_CLK);
 
-    Net_1:macrocell
+    Net_42:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_3) + (!main_1 * !main_2 * !main_3) + (!main_1 * !main_3 * !main_5 * !main_6 * !main_7 * main_8 * !main_9 * !main_10) + (main_1 * !main_2 * main_3) + (main_1 * main_2 * !main_3) + (main_1 * !main_4) + (!main_3 * !main_4)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => Net_1,
+            q => Net_42,
             clock_0 => \SPI:Net_276\,
-            main_0 => Net_1,
+            main_0 => Net_42,
             main_1 => \SPI:BSPIM:state_2\,
             main_2 => \SPI:BSPIM:state_1\,
             main_3 => \SPI:BSPIM:state_0\,
@@ -1345,19 +1345,19 @@ BEGIN
             main_2 => \SPI:BSPIM:state_0\,
             main_3 => \SPI:BSPIM:tx_status_1\);
 
-    Net_3:macrocell
+    Net_39:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * main_1 * !main_3) + (main_0 * !main_1 * !main_2 * !main_3) + (main_1 * main_2 * !main_3)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => Net_3,
+            q => Net_39,
             clock_0 => \SPI:Net_276\,
             main_0 => \SPI:BSPIM:state_2\,
             main_1 => \SPI:BSPIM:state_1\,
             main_2 => \SPI:BSPIM:state_0\,
-            main_3 => Net_3);
+            main_3 => Net_39);
 
     \SPI:BSPIM:load_cond\:macrocell
         GENERIC MAP(
@@ -1411,18 +1411,18 @@ BEGIN
             main_2 => \SPI:BSPIM:state_0\,
             main_3 => \SPI:BSPIM:cnt_enable\);
 
-    Net_2:macrocell
+    Net_40:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2) + (main_1 * main_2 * main_3)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => Net_2,
+            q => Net_40,
             clock_0 => \SPI:Net_276\,
             main_0 => \SPI:BSPIM:state_2\,
             main_1 => \SPI:BSPIM:state_1\,
             main_2 => \SPI:BSPIM:state_0\,
-            main_3 => Net_2);
+            main_3 => Net_40);
 
 END __DEFAULT__;

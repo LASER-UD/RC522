@@ -2,7 +2,7 @@
 --	Conversion of RFID.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Jan 19 00:14:34 2019
+--	Thu Jan 31 13:46:52 2019
 --
 
 USE cypress.cypress.all;
@@ -24,7 +24,7 @@ SIGNAL \SPI:Net_244\ : bit;
 SIGNAL \SPI:BSPIM:mosi_after_ld\ : bit;
 SIGNAL \SPI:BSPIM:so_send\ : bit;
 SIGNAL \SPI:BSPIM:so_send_reg\ : bit;
-SIGNAL Net_1 : bit;
+SIGNAL Net_42 : bit;
 SIGNAL \SPI:BSPIM:mosi_reg\ : bit;
 SIGNAL \SPI:BSPIM:mosi_fin\ : bit;
 SIGNAL \SPI:BSPIM:mosi_cpha_0\ : bit;
@@ -32,7 +32,7 @@ SIGNAL \SPI:BSPIM:state_2\ : bit;
 SIGNAL \SPI:BSPIM:state_1\ : bit;
 SIGNAL \SPI:BSPIM:state_0\ : bit;
 SIGNAL \SPI:BSPIM:mosi_from_dp\ : bit;
-SIGNAL Net_3 : bit;
+SIGNAL Net_39 : bit;
 SIGNAL \SPI:BSPIM:mosi_hs_reg\ : bit;
 SIGNAL \SPI:BSPIM:mosi_cpha_1\ : bit;
 SIGNAL \SPI:BSPIM:pre_mosi\ : bit;
@@ -76,13 +76,13 @@ SIGNAL \SPI:Net_294\ : bit;
 SIGNAL \SPI:Net_273\ : bit;
 SIGNAL \SPI:BSPIM:ld_ident\ : bit;
 SIGNAL \SPI:BSPIM:cnt_enable\ : bit;
-SIGNAL Net_2 : bit;
+SIGNAL Net_40 : bit;
 SIGNAL zero : bit;
 SIGNAL \SPI:BSPIM:count_6\ : bit;
 SIGNAL \SPI:BSPIM:count_5\ : bit;
 SIGNAL \SPI:BSPIM:cnt_tc\ : bit;
-SIGNAL Net_9 : bit;
-SIGNAL Net_7 : bit;
+SIGNAL Net_37 : bit;
+SIGNAL Net_35 : bit;
 SIGNAL \SPI:BSPIM:sR8:Dp:ce0\ : bit;
 ATTRIBUTE port_state_att of \SPI:BSPIM:sR8:Dp:ce0\:SIGNAL IS 2;
 SIGNAL \SPI:BSPIM:sR8:Dp:cl0\ : bit;
@@ -161,7 +161,7 @@ TERMINAL tmpSIOVREF__SDA_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__SDA_net_0 : bit;
 SIGNAL tmpOE__RESET_net_0 : bit;
 SIGNAL tmpFB_0__RESET_net_0 : bit;
-SIGNAL Net_26 : bit;
+SIGNAL Net_38 : bit;
 TERMINAL tmpSIOVREF__RESET_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__RESET_net_0 : bit;
 SIGNAL \LCD:tmpOE__LCDPort_net_6\ : bit;
@@ -192,14 +192,14 @@ SIGNAL \SPI:BSPIM:mosi_reg\\D\ : bit;
 SIGNAL \SPI:BSPIM:state_2\\D\ : bit;
 SIGNAL \SPI:BSPIM:state_1\\D\ : bit;
 SIGNAL \SPI:BSPIM:state_0\\D\ : bit;
-SIGNAL Net_3D : bit;
+SIGNAL Net_39D : bit;
 SIGNAL \SPI:BSPIM:mosi_pre_reg\\D\ : bit;
 SIGNAL \SPI:BSPIM:load_cond\\D\ : bit;
 SIGNAL \SPI:BSPIM:dpcounter_one_reg\\D\ : bit;
 SIGNAL \SPI:BSPIM:mosi_from_dp_reg\\D\ : bit;
 SIGNAL \SPI:BSPIM:ld_ident\\D\ : bit;
 SIGNAL \SPI:BSPIM:cnt_enable\\D\ : bit;
-SIGNAL Net_2D : bit;
+SIGNAL Net_40D : bit;
 BEGIN
 
 one <=  ('1') ;
@@ -241,11 +241,11 @@ one <=  ('1') ;
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_1\ and \SPI:BSPIM:state_0\)
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_1\));
 
-Net_3D <= ((not \SPI:BSPIM:state_0\ and Net_3)
+Net_39D <= ((not \SPI:BSPIM:state_0\ and Net_39)
 	OR (not \SPI:BSPIM:state_1\ and \SPI:BSPIM:state_2\ and \SPI:BSPIM:state_0\)
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_1\ and not \SPI:BSPIM:state_0\)
 	OR (not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_2\ and \SPI:BSPIM:state_1\)
-	OR (\SPI:BSPIM:state_1\ and Net_3));
+	OR (\SPI:BSPIM:state_1\ and Net_39));
 
 \SPI:BSPIM:cnt_enable\\D\ <= ((not \SPI:BSPIM:state_1\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_2\ and \SPI:BSPIM:cnt_enable\)
 	OR (not \SPI:BSPIM:state_2\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:state_0\)
@@ -255,7 +255,7 @@ Net_3D <= ((not \SPI:BSPIM:state_0\ and Net_3)
 
 \SPI:BSPIM:mosi_reg\\D\ <= ((not \SPI:BSPIM:state_1\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_2\ and \SPI:BSPIM:mosi_from_dp\)
 	OR (\SPI:BSPIM:state_2\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:state_0\ and \SPI:BSPIM:mosi_from_dp\)
-	OR (not \SPI:BSPIM:state_2\ and Net_1 and \SPI:BSPIM:state_0\)
+	OR (not \SPI:BSPIM:state_2\ and Net_42 and \SPI:BSPIM:state_0\)
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:mosi_from_dp\ and \SPI:BSPIM:ld_ident\)
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:mosi_from_dp\ and \SPI:BSPIM:count_0\)
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_0\ and not \SPI:BSPIM:count_1\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:mosi_from_dp\)
@@ -263,7 +263,7 @@ Net_3D <= ((not \SPI:BSPIM:state_0\ and Net_3)
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:mosi_from_dp\ and \SPI:BSPIM:count_3\)
 	OR (not \SPI:BSPIM:state_2\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:mosi_from_dp\ and \SPI:BSPIM:count_4\));
 
-Net_2D <= ((\SPI:BSPIM:state_1\ and \SPI:BSPIM:state_0\ and Net_2)
+Net_40D <= ((\SPI:BSPIM:state_1\ and \SPI:BSPIM:state_0\ and Net_40)
 	OR (not \SPI:BSPIM:state_2\ and \SPI:BSPIM:state_1\ and \SPI:BSPIM:state_0\));
 
 \SPI:BSPIM:ld_ident\\D\ <= ((not \SPI:BSPIM:state_1\ and not \SPI:BSPIM:state_0\ and \SPI:BSPIM:state_2\)
@@ -313,7 +313,7 @@ zero <=  ('0') ;
 		clock=>\SPI:BSPIM:clk_fin\,
 		status=>(zero, zero, \SPI:BSPIM:tx_status_4\, \SPI:BSPIM:load_rx_data\,
 			\SPI:BSPIM:tx_status_2\, \SPI:BSPIM:tx_status_1\, \SPI:BSPIM:tx_status_0\),
-		interrupt=>Net_9);
+		interrupt=>Net_37);
 \SPI:BSPIM:RxStsReg\:cy_psoc3_statusi
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"1000000",
@@ -322,7 +322,7 @@ zero <=  ('0') ;
 		clock=>\SPI:BSPIM:clk_fin\,
 		status=>(\SPI:BSPIM:rx_status_6\, \SPI:BSPIM:rx_status_5\, \SPI:BSPIM:rx_status_4\, zero,
 			zero, zero, zero),
-		interrupt=>Net_7);
+		interrupt=>Net_35);
 \SPI:BSPIM:sR8:Dp:u0\:cy_psoc3_dp
 	GENERIC MAP(cy_dpconfig=>"0000000000000000000000001100000000000010010000000001001000010000000000101100000000010010000000000000001001000000000000100100000011111111000000001111111111111111000000000010001001001000111100000000000000000100",
 		d0_init=>"00000000",
@@ -536,7 +536,7 @@ MOSI:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
-		y=>Net_1,
+		y=>Net_42,
 		fb=>(tmpFB_0__MOSI_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__MOSI_net_0),
@@ -606,7 +606,7 @@ SCK:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
-		y=>Net_2,
+		y=>Net_40,
 		fb=>(tmpFB_0__SCK_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__SCK_net_0),
@@ -676,7 +676,7 @@ SDA:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
-		y=>Net_3,
+		y=>Net_39,
 		fb=>(tmpFB_0__SDA_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__SDA_net_0),
@@ -749,7 +749,7 @@ RESET:cy_psoc3_pins_v1_10
 		y=>(zero),
 		fb=>(tmpFB_0__RESET_net_0),
 		analog=>(open),
-		io=>Net_26,
+		io=>Net_38,
 		siovref=>(tmpSIOVREF__RESET_net_0),
 		annotation=>(open),
 		in_clock=>zero,
@@ -842,7 +842,7 @@ RESET:cy_psoc3_pins_v1_10
 \SPI:BSPIM:mosi_reg\:cy_dff
 	PORT MAP(d=>\SPI:BSPIM:mosi_reg\\D\,
 		clk=>\SPI:BSPIM:clk_fin\,
-		q=>Net_1);
+		q=>Net_42);
 \SPI:BSPIM:state_2\:cy_dff
 	PORT MAP(d=>\SPI:BSPIM:state_2\\D\,
 		clk=>\SPI:BSPIM:clk_fin\,
@@ -855,10 +855,10 @@ RESET:cy_psoc3_pins_v1_10
 	PORT MAP(d=>\SPI:BSPIM:state_0\\D\,
 		clk=>\SPI:BSPIM:clk_fin\,
 		q=>\SPI:BSPIM:state_0\);
-Net_3:cy_dff
-	PORT MAP(d=>Net_3D,
+Net_39:cy_dff
+	PORT MAP(d=>Net_39D,
 		clk=>\SPI:BSPIM:clk_fin\,
-		q=>Net_3);
+		q=>Net_39);
 \SPI:BSPIM:mosi_pre_reg\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\SPI:BSPIM:clk_fin\,
@@ -883,9 +883,9 @@ Net_3:cy_dff
 	PORT MAP(d=>\SPI:BSPIM:cnt_enable\\D\,
 		clk=>\SPI:BSPIM:clk_fin\,
 		q=>\SPI:BSPIM:cnt_enable\);
-Net_2:cy_dff
-	PORT MAP(d=>Net_2D,
+Net_40:cy_dff
+	PORT MAP(d=>Net_40D,
 		clk=>\SPI:BSPIM:clk_fin\,
-		q=>Net_2);
+		q=>Net_40);
 
 END R_T_L;

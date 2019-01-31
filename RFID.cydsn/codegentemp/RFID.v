@@ -1,6 +1,6 @@
 // ======================================================================
 // RFID.v generated from TopDesign.cysch
-// 01/19/2019 at 00:14
+// 01/31/2019 at 13:46
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -345,27 +345,27 @@ endmodule
 // top
 module top ;
 
-          wire  Net_26;
-          wire  Net_9;
-          wire  Net_8;
-          wire  Net_7;
+          wire  Net_38;
+          wire  Net_37;
+          wire  Net_36;
+          wire  Net_35;
           wire  Net_6;
-          wire  Net_15;
+          wire  Net_34;
           wire  Net_4;
-          wire  Net_3;
-          wire  Net_2;
-          wire  Net_1;
+          wire  Net_39;
+          wire  Net_40;
+          wire  Net_42;
 
     SPI_Master_v2_50_0 SPI (
-        .mosi(Net_1),
-        .sclk(Net_2),
-        .ss(Net_3),
+        .mosi(Net_42),
+        .sclk(Net_40),
+        .ss(Net_39),
         .miso(Net_4),
         .clock(1'b0),
         .reset(Net_6),
-        .rx_interrupt(Net_7),
-        .sdat(Net_8),
-        .tx_interrupt(Net_9));
+        .rx_interrupt(Net_35),
+        .sdat(Net_36),
+        .tx_interrupt(Net_37));
     defparam SPI.BidirectMode = 0;
     defparam SPI.HighSpeedMode = 0;
     defparam SPI.NumberOfDataBits = 8;
@@ -508,7 +508,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		MOSI
 		 (.oe(tmpOE__MOSI_net),
-		  .y({Net_1}),
+		  .y({Net_42}),
 		  .fb({tmpFB_0__MOSI_net[0:0]}),
 		  .io({tmpIO_0__MOSI_net[0:0]}),
 		  .siovref(tmpSIOVREF__MOSI_net),
@@ -583,7 +583,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		SCK
 		 (.oe(tmpOE__SCK_net),
-		  .y({Net_2}),
+		  .y({Net_40}),
 		  .fb({tmpFB_0__SCK_net[0:0]}),
 		  .io({tmpIO_0__SCK_net[0:0]}),
 		  .siovref(tmpSIOVREF__SCK_net),
@@ -658,7 +658,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		SDA
 		 (.oe(tmpOE__SDA_net),
-		  .y({Net_3}),
+		  .y({Net_39}),
 		  .fb({tmpFB_0__SDA_net[0:0]}),
 		  .io({tmpIO_0__SDA_net[0:0]}),
 		  .siovref(tmpSIOVREF__SDA_net),
@@ -734,7 +734,7 @@ module top ;
 		 (.oe(tmpOE__RESET_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__RESET_net[0:0]}),
-		  .io({Net_26}),
+		  .io({Net_38}),
 		  .siovref(tmpSIOVREF__RESET_net),
 		  .interrupt({tmpINTERRUPT_0__RESET_net[0:0]}),
 		  .in_clock({1'b0}),

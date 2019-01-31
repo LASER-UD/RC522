@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 1
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 1
   37              		.loc 1 18 0
   38 0002 FFF7FEFF 		bl	LCD_Start
   39              	.LVL0:
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 2
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 2
 
 
   19:main.c        ****     LCD_Position(0,0);
@@ -69,934 +69,749 @@ ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 1
   44              	.LVL1:
   20:main.c        ****     LCD_PrintString("Inicio");
   45              		.loc 1 20 0
-  46 000e 1848     		ldr	r0, .L4
+  46 000e 0648     		ldr	r0, .L4
   47 0010 FFF7FEFF 		bl	LCD_PrintString
   48              	.LVL2:
-  21:main.c        ****     CyDelay(2000);
-  49              		.loc 1 21 0
-  50 0014 4FF4FA60 		mov	r0, #2000
-  51 0018 FFF7FEFF 		bl	CyDelay
-  52              	.LVL3:
-  22:main.c        ****     LCD_Position(0,0);
-  53              		.loc 1 22 0
-  54 001c 0021     		movs	r1, #0
-  55 001e 0846     		mov	r0, r1
-  56 0020 FFF7FEFF 		bl	LCD_Position
-  57              	.LVL4:
-  23:main.c        ****     LCD_PrintString("      ");
-  58              		.loc 1 23 0
-  59 0024 1348     		ldr	r0, .L4+4
-  60 0026 FFF7FEFF 		bl	LCD_PrintString
-  61              	.LVL5:
-  24:main.c        ****     PCD_Init();
-  62              		.loc 1 24 0
-  63 002a FFF7FEFF 		bl	PCD_Init
-  64              	.LVL6:
-  65              	.L2:
+  21:main.c        ****     //CyDelay(2000);
+  22:main.c        ****     //LCD_Position(0,0);
+  23:main.c        ****     //LCD_PrintString("      ");
+  24:main.c        ****     //PCD_Init();
   25:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  26:main.c        **** 
+  26:main.c        ****     SPI_Start();
+  49              		.loc 1 26 0
+  50 0014 FFF7FEFF 		bl	SPI_Start
+  51              	.LVL3:
+  52              	.L2:
   27:main.c        ****     for(;;)
   28:main.c        ****     {
   29:main.c        ****         /* Place your application code here. */
   30:main.c        ****         //Debe salir 91H 
-  31:main.c        ****         LCD_Position(0,0);
-  66              		.loc 1 31 0 discriminator 1
-  67 002e 0021     		movs	r1, #0
-  68 0030 0846     		mov	r0, r1
-  69 0032 FFF7FEFF 		bl	LCD_Position
-  70              	.LVL7:
-  32:main.c        ****         LCD_PrintString("Version:");
-  71              		.loc 1 32 0 discriminator 1
-  72 0036 1048     		ldr	r0, .L4+8
-  73 0038 FFF7FEFF 		bl	LCD_PrintString
-  74              	.LVL8:
-  33:main.c        ****         LCD_Position(1,0);
-  75              		.loc 1 33 0 discriminator 1
-  76 003c 0021     		movs	r1, #0
-  77 003e 0120     		movs	r0, #1
-  78 0040 FFF7FEFF 		bl	LCD_Position
-  79              	.LVL9:
-  34:main.c        ****         LCD_PrintHexUint8(PCD_ReadRegister(VersionReg));
-  80              		.loc 1 34 0 discriminator 1
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 3
+  31:main.c        ****         /*
+  32:main.c        ****         LCD_Position(0,0);
+  33:main.c        ****         LCD_PrintString("Version:");
+  34:main.c        ****         LCD_Position(1,0);
+  35:main.c        ****         LCD_PrintHexUint8(PCD_ReadRegister(VersionReg));
+  36:main.c        ****         CyDelay(2000);
+  37:main.c        ****         LCD_Position(1,0);
+  38:main.c        ****         LCD_PrintString("      ");
+  39:main.c        ****         */
+  40:main.c        ****         CyDelayUs(100);
+  53              		.loc 1 40 0 discriminator 1
+  54 0018 6420     		movs	r0, #100
+  55 001a FFF7FEFF 		bl	CyDelayUs
+  56              	.LVL4:
+  41:main.c        ****         //PCD_ReadRegister(VersionReg);        
+  42:main.c        ****         SPI_WriteTxData(0b11001010);
+  57              		.loc 1 42 0 discriminator 1
+  58 001e CA20     		movs	r0, #202
+  59 0020 FFF7FEFF 		bl	SPI_WriteTxData
+  60              	.LVL5:
+  61 0024 F8E7     		b	.L2
+  62              	.L5:
+  63 0026 00BF     		.align	2
+  64              	.L4:
+  65 0028 00000000 		.word	.LC0
+  66              		.cfi_endproc
+  67              	.LFE64:
+  68              		.size	main, .-main
+  69              		.comm	uid,12,4
+  70              		.section	.rodata.str1.4,"aMS",%progbits,1
+  71              		.align	2
+  72              	.LC0:
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 3
 
 
-  81 0044 3720     		movs	r0, #55
-  82 0046 FFF7FEFF 		bl	PCD_ReadRegister
-  83              	.LVL10:
-  84 004a FFF7FEFF 		bl	LCD_PrintInt8
-  85              	.LVL11:
-  35:main.c        ****         CyDelay(2000);
-  86              		.loc 1 35 0 discriminator 1
-  87 004e 4FF4FA60 		mov	r0, #2000
-  88 0052 FFF7FEFF 		bl	CyDelay
-  89              	.LVL12:
-  36:main.c        ****         LCD_Position(1,0);
-  90              		.loc 1 36 0 discriminator 1
-  91 0056 0021     		movs	r1, #0
-  92 0058 0120     		movs	r0, #1
-  93 005a FFF7FEFF 		bl	LCD_Position
-  94              	.LVL13:
-  37:main.c        ****         LCD_PrintString("      ");
-  95              		.loc 1 37 0 discriminator 1
-  96 005e 0548     		ldr	r0, .L4+4
-  97 0060 FFF7FEFF 		bl	LCD_PrintString
-  98              	.LVL14:
-  38:main.c        ****         CyDelay(2000);
-  99              		.loc 1 38 0 discriminator 1
- 100 0064 4FF4FA60 		mov	r0, #2000
- 101 0068 FFF7FEFF 		bl	CyDelay
- 102              	.LVL15:
- 103 006c DFE7     		b	.L2
- 104              	.L5:
- 105 006e 00BF     		.align	2
- 106              	.L4:
- 107 0070 00000000 		.word	.LC0
- 108 0074 08000000 		.word	.LC1
- 109 0078 10000000 		.word	.LC2
- 110              		.cfi_endproc
- 111              	.LFE64:
- 112              		.size	main, .-main
- 113              		.comm	uid,12,4
- 114              		.section	.rodata.str1.4,"aMS",%progbits,1
- 115              		.align	2
- 116              	.LC0:
- 117 0000 496E6963 		.ascii	"Inicio\000"
- 117      696F00
- 118 0007 00       		.space	1
- 119              	.LC1:
- 120 0008 20202020 		.ascii	"      \000"
- 120      202000
- 121 000f 00       		.space	1
- 122              	.LC2:
- 123 0010 56657273 		.ascii	"Version:\000"
- 123      696F6E3A 
- 123      00
- 124              		.text
- 125              	.Letext0:
- 126              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 127              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 128              		.file 4 "RC522.h"
- 129              		.file 5 "Generated_Source\\PSoC5/LCD.h"
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 4
+  73 0000 496E6963 		.ascii	"Inicio\000"
+  73      696F00
+  74              		.text
+  75              	.Letext0:
+  76              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  77              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  78              		.file 4 "RC522.h"
+  79              		.file 5 "Generated_Source\\PSoC5/LCD.h"
+  80              		.file 6 "Generated_Source\\PSoC5/SPI.h"
+  81              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+  82              		.file 8 "Generated_Source\\PSoC5/core_cm3.h"
+  83              		.section	.debug_info,"",%progbits
+  84              	.Ldebug_info0:
+  85 0000 CC010000 		.4byte	0x1cc
+  86 0004 0400     		.2byte	0x4
+  87 0006 00000000 		.4byte	.Ldebug_abbrev0
+  88 000a 04       		.byte	0x4
+  89 000b 01       		.uleb128 0x1
+  90 000c 27000000 		.4byte	.LASF25
+  91 0010 0C       		.byte	0xc
+  92 0011 6B010000 		.4byte	.LASF26
+  93 0015 9A010000 		.4byte	.LASF27
+  94 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  95 001d 00000000 		.4byte	0
+  96 0021 00000000 		.4byte	.Ldebug_line0
+  97 0025 02       		.uleb128 0x2
+  98 0026 01       		.byte	0x1
+  99 0027 06       		.byte	0x6
+ 100 0028 DD010000 		.4byte	.LASF0
+ 101 002c 02       		.uleb128 0x2
+ 102 002d 01       		.byte	0x1
+ 103 002e 08       		.byte	0x8
+ 104 002f E7000000 		.4byte	.LASF1
+ 105 0033 02       		.uleb128 0x2
+ 106 0034 02       		.byte	0x2
+ 107 0035 05       		.byte	0x5
+ 108 0036 77010000 		.4byte	.LASF2
+ 109 003a 02       		.uleb128 0x2
+ 110 003b 02       		.byte	0x2
+ 111 003c 07       		.byte	0x7
+ 112 003d C7000000 		.4byte	.LASF3
+ 113 0041 03       		.uleb128 0x3
+ 114 0042 08000000 		.4byte	.LASF9
+ 115 0046 02       		.byte	0x2
+ 116 0047 3F       		.byte	0x3f
+ 117 0048 4C000000 		.4byte	0x4c
+ 118 004c 02       		.uleb128 0x2
+ 119 004d 04       		.byte	0x4
+ 120 004e 05       		.byte	0x5
+ 121 004f 91010000 		.4byte	.LASF4
+ 122 0053 02       		.uleb128 0x2
+ 123 0054 04       		.byte	0x4
+ 124 0055 07       		.byte	0x7
+ 125 0056 B5000000 		.4byte	.LASF5
+ 126 005a 02       		.uleb128 0x2
+ 127 005b 08       		.byte	0x8
+ 128 005c 05       		.byte	0x5
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 4
 
 
- 130              		.file 6 "Generated_Source\\PSoC5/CyLib.h"
- 131              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
- 132              		.section	.debug_info,"",%progbits
- 133              	.Ldebug_info0:
- 134 0000 B0020000 		.4byte	0x2b0
- 135 0004 0400     		.2byte	0x4
- 136 0006 00000000 		.4byte	.Ldebug_abbrev0
- 137 000a 04       		.byte	0x4
- 138 000b 01       		.uleb128 0x1
- 139 000c 27000000 		.4byte	.LASF26
- 140 0010 0C       		.byte	0xc
- 141 0011 89010000 		.4byte	.LASF27
- 142 0015 A8010000 		.4byte	.LASF28
- 143 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 144 001d 00000000 		.4byte	0
- 145 0021 00000000 		.4byte	.Ldebug_line0
- 146 0025 02       		.uleb128 0x2
- 147 0026 01       		.byte	0x1
- 148 0027 06       		.byte	0x6
- 149 0028 EB010000 		.4byte	.LASF0
- 150 002c 02       		.uleb128 0x2
- 151 002d 01       		.byte	0x1
- 152 002e 08       		.byte	0x8
- 153 002f E7000000 		.4byte	.LASF1
- 154 0033 02       		.uleb128 0x2
- 155 0034 02       		.byte	0x2
- 156 0035 05       		.byte	0x5
- 157 0036 95010000 		.4byte	.LASF2
- 158 003a 02       		.uleb128 0x2
- 159 003b 02       		.byte	0x2
- 160 003c 07       		.byte	0x7
- 161 003d C7000000 		.4byte	.LASF3
- 162 0041 03       		.uleb128 0x3
- 163 0042 08000000 		.4byte	.LASF9
- 164 0046 02       		.byte	0x2
- 165 0047 3F       		.byte	0x3f
- 166 0048 4C000000 		.4byte	0x4c
- 167 004c 02       		.uleb128 0x2
- 168 004d 04       		.byte	0x4
- 169 004e 05       		.byte	0x5
- 170 004f 9F010000 		.4byte	.LASF4
- 171 0053 02       		.uleb128 0x2
- 172 0054 04       		.byte	0x4
- 173 0055 07       		.byte	0x7
- 174 0056 B5000000 		.4byte	.LASF5
- 175 005a 02       		.uleb128 0x2
- 176 005b 08       		.byte	0x8
- 177 005c 05       		.byte	0x5
- 178 005d 6A010000 		.4byte	.LASF6
- 179 0061 02       		.uleb128 0x2
- 180 0062 08       		.byte	0x8
- 181 0063 07       		.byte	0x7
- 182 0064 27010000 		.4byte	.LASF7
- 183 0068 04       		.uleb128 0x4
- 184 0069 04       		.byte	0x4
- 185 006a 05       		.byte	0x5
- 186 006b 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 5
+ 129 005d 5D010000 		.4byte	.LASF6
+ 130 0061 02       		.uleb128 0x2
+ 131 0062 08       		.byte	0x8
+ 132 0063 07       		.byte	0x7
+ 133 0064 28010000 		.4byte	.LASF7
+ 134 0068 04       		.uleb128 0x4
+ 135 0069 04       		.byte	0x4
+ 136 006a 05       		.byte	0x5
+ 137 006b 696E7400 		.ascii	"int\000"
+ 138 006f 02       		.uleb128 0x2
+ 139 0070 04       		.byte	0x4
+ 140 0071 07       		.byte	0x7
+ 141 0072 1B010000 		.4byte	.LASF8
+ 142 0076 03       		.uleb128 0x3
+ 143 0077 4C010000 		.4byte	.LASF10
+ 144 007b 03       		.byte	0x3
+ 145 007c 2C       		.byte	0x2c
+ 146 007d 41000000 		.4byte	0x41
+ 147 0081 02       		.uleb128 0x2
+ 148 0082 04       		.byte	0x4
+ 149 0083 04       		.byte	0x4
+ 150 0084 12000000 		.4byte	.LASF11
+ 151 0088 02       		.uleb128 0x2
+ 152 0089 08       		.byte	0x8
+ 153 008a 04       		.byte	0x4
+ 154 008b F5000000 		.4byte	.LASF12
+ 155 008f 02       		.uleb128 0x2
+ 156 0090 01       		.byte	0x1
+ 157 0091 08       		.byte	0x8
+ 158 0092 72010000 		.4byte	.LASF13
+ 159 0096 02       		.uleb128 0x2
+ 160 0097 08       		.byte	0x8
+ 161 0098 04       		.byte	0x4
+ 162 0099 D1010000 		.4byte	.LASF14
+ 163 009d 02       		.uleb128 0x2
+ 164 009e 04       		.byte	0x4
+ 165 009f 07       		.byte	0x7
+ 166 00a0 54010000 		.4byte	.LASF15
+ 167 00a4 05       		.uleb128 0x5
+ 168 00a5 0C       		.byte	0xc
+ 169 00a6 04       		.byte	0x4
+ 170 00a7 3A       		.byte	0x3a
+ 171 00a8 D1000000 		.4byte	0xd1
+ 172 00ac 06       		.uleb128 0x6
+ 173 00ad 22000000 		.4byte	.LASF16
+ 174 00b1 04       		.byte	0x4
+ 175 00b2 3B       		.byte	0x3b
+ 176 00b3 2C000000 		.4byte	0x2c
+ 177 00b7 00       		.byte	0
+ 178 00b8 06       		.uleb128 0x6
+ 179 00b9 00000000 		.4byte	.LASF17
+ 180 00bd 04       		.byte	0x4
+ 181 00be 3C       		.byte	0x3c
+ 182 00bf D1000000 		.4byte	0xd1
+ 183 00c3 01       		.byte	0x1
+ 184 00c4 07       		.uleb128 0x7
+ 185 00c5 73616B00 		.ascii	"sak\000"
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 5
 
 
- 187 006f 02       		.uleb128 0x2
- 188 0070 04       		.byte	0x4
- 189 0071 07       		.byte	0x7
- 190 0072 1A010000 		.4byte	.LASF8
- 191 0076 03       		.uleb128 0x3
- 192 0077 59010000 		.4byte	.LASF10
- 193 007b 03       		.byte	0x3
- 194 007c 2C       		.byte	0x2c
- 195 007d 41000000 		.4byte	0x41
- 196 0081 02       		.uleb128 0x2
- 197 0082 04       		.byte	0x4
- 198 0083 04       		.byte	0x4
- 199 0084 12000000 		.4byte	.LASF11
- 200 0088 02       		.uleb128 0x2
- 201 0089 08       		.byte	0x8
- 202 008a 04       		.byte	0x4
- 203 008b F5000000 		.4byte	.LASF12
- 204 008f 02       		.uleb128 0x2
- 205 0090 01       		.byte	0x1
- 206 0091 08       		.byte	0x8
- 207 0092 90010000 		.4byte	.LASF13
- 208 0096 02       		.uleb128 0x2
- 209 0097 08       		.byte	0x8
- 210 0098 04       		.byte	0x4
- 211 0099 DF010000 		.4byte	.LASF14
- 212 009d 02       		.uleb128 0x2
- 213 009e 04       		.byte	0x4
- 214 009f 07       		.byte	0x7
- 215 00a0 61010000 		.4byte	.LASF15
- 216 00a4 05       		.uleb128 0x5
- 217 00a5 0C       		.byte	0xc
- 218 00a6 04       		.byte	0x4
- 219 00a7 3A       		.byte	0x3a
- 220 00a8 D1000000 		.4byte	0xd1
- 221 00ac 06       		.uleb128 0x6
- 222 00ad 22000000 		.4byte	.LASF16
- 223 00b1 04       		.byte	0x4
- 224 00b2 3B       		.byte	0x3b
- 225 00b3 2C000000 		.4byte	0x2c
- 226 00b7 00       		.byte	0
- 227 00b8 06       		.uleb128 0x6
- 228 00b9 00000000 		.4byte	.LASF17
- 229 00bd 04       		.byte	0x4
- 230 00be 3C       		.byte	0x3c
- 231 00bf D1000000 		.4byte	0xd1
- 232 00c3 01       		.byte	0x1
- 233 00c4 07       		.uleb128 0x7
- 234 00c5 73616B00 		.ascii	"sak\000"
- 235 00c9 04       		.byte	0x4
- 236 00ca 3D       		.byte	0x3d
- 237 00cb 2C000000 		.4byte	0x2c
- 238 00cf 0B       		.byte	0xb
- 239 00d0 00       		.byte	0
- 240 00d1 08       		.uleb128 0x8
- 241 00d2 2C000000 		.4byte	0x2c
- 242 00d6 E1000000 		.4byte	0xe1
- 243 00da 09       		.uleb128 0x9
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 6
+ 186 00c9 04       		.byte	0x4
+ 187 00ca 3D       		.byte	0x3d
+ 188 00cb 2C000000 		.4byte	0x2c
+ 189 00cf 0B       		.byte	0xb
+ 190 00d0 00       		.byte	0
+ 191 00d1 08       		.uleb128 0x8
+ 192 00d2 2C000000 		.4byte	0x2c
+ 193 00d6 E1000000 		.4byte	0xe1
+ 194 00da 09       		.uleb128 0x9
+ 195 00db 9D000000 		.4byte	0x9d
+ 196 00df 09       		.byte	0x9
+ 197 00e0 00       		.byte	0
+ 198 00e1 0A       		.uleb128 0xa
+ 199 00e2 55696400 		.ascii	"Uid\000"
+ 200 00e6 04       		.byte	0x4
+ 201 00e7 3E       		.byte	0x3e
+ 202 00e8 A4000000 		.4byte	0xa4
+ 203 00ec 0B       		.uleb128 0xb
+ 204 00ed FC000000 		.4byte	.LASF28
+ 205 00f1 01       		.byte	0x1
+ 206 00f2 0F       		.byte	0xf
+ 207 00f3 68000000 		.4byte	0x68
+ 208 00f7 00000000 		.4byte	.LFB64
+ 209 00fb 2C000000 		.4byte	.LFE64-.LFB64
+ 210 00ff 01       		.uleb128 0x1
+ 211 0100 9C       		.byte	0x9c
+ 212 0101 6B010000 		.4byte	0x16b
+ 213 0105 0C       		.uleb128 0xc
+ 214 0106 06000000 		.4byte	.LVL0
+ 215 010a 8D010000 		.4byte	0x18d
+ 216 010e 0D       		.uleb128 0xd
+ 217 010f 0E000000 		.4byte	.LVL1
+ 218 0113 98010000 		.4byte	0x198
+ 219 0117 26010000 		.4byte	0x126
+ 220 011b 0E       		.uleb128 0xe
+ 221 011c 01       		.uleb128 0x1
+ 222 011d 50       		.byte	0x50
+ 223 011e 01       		.uleb128 0x1
+ 224 011f 30       		.byte	0x30
+ 225 0120 0E       		.uleb128 0xe
+ 226 0121 01       		.uleb128 0x1
+ 227 0122 51       		.byte	0x51
+ 228 0123 01       		.uleb128 0x1
+ 229 0124 30       		.byte	0x30
+ 230 0125 00       		.byte	0
+ 231 0126 0D       		.uleb128 0xd
+ 232 0127 14000000 		.4byte	.LVL2
+ 233 012b A3010000 		.4byte	0x1a3
+ 234 012f 3D010000 		.4byte	0x13d
+ 235 0133 0E       		.uleb128 0xe
+ 236 0134 01       		.uleb128 0x1
+ 237 0135 50       		.byte	0x50
+ 238 0136 05       		.uleb128 0x5
+ 239 0137 03       		.byte	0x3
+ 240 0138 00000000 		.4byte	.LC0
+ 241 013c 00       		.byte	0
+ 242 013d 0C       		.uleb128 0xc
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 6
 
 
- 244 00db 9D000000 		.4byte	0x9d
- 245 00df 09       		.byte	0x9
- 246 00e0 00       		.byte	0
- 247 00e1 0A       		.uleb128 0xa
- 248 00e2 55696400 		.ascii	"Uid\000"
- 249 00e6 04       		.byte	0x4
- 250 00e7 3E       		.byte	0x3e
- 251 00e8 A4000000 		.4byte	0xa4
- 252 00ec 0B       		.uleb128 0xb
- 253 00ed 05010000 		.4byte	.LASF29
- 254 00f1 01       		.byte	0x1
- 255 00f2 0F       		.byte	0xf
- 256 00f3 68000000 		.4byte	0x68
- 257 00f7 00000000 		.4byte	.LFB64
- 258 00fb 7C000000 		.4byte	.LFE64-.LFB64
- 259 00ff 01       		.uleb128 0x1
- 260 0100 9C       		.byte	0x9c
- 261 0101 44020000 		.4byte	0x244
- 262 0105 0C       		.uleb128 0xc
- 263 0106 06000000 		.4byte	.LVL0
- 264 010a 66020000 		.4byte	0x266
- 265 010e 0D       		.uleb128 0xd
- 266 010f 0E000000 		.4byte	.LVL1
- 267 0113 71020000 		.4byte	0x271
- 268 0117 26010000 		.4byte	0x126
- 269 011b 0E       		.uleb128 0xe
- 270 011c 01       		.uleb128 0x1
- 271 011d 50       		.byte	0x50
- 272 011e 01       		.uleb128 0x1
- 273 011f 30       		.byte	0x30
- 274 0120 0E       		.uleb128 0xe
- 275 0121 01       		.uleb128 0x1
- 276 0122 51       		.byte	0x51
- 277 0123 01       		.uleb128 0x1
- 278 0124 30       		.byte	0x30
- 279 0125 00       		.byte	0
- 280 0126 0D       		.uleb128 0xd
- 281 0127 14000000 		.4byte	.LVL2
- 282 012b 7C020000 		.4byte	0x27c
- 283 012f 3D010000 		.4byte	0x13d
- 284 0133 0E       		.uleb128 0xe
- 285 0134 01       		.uleb128 0x1
- 286 0135 50       		.byte	0x50
- 287 0136 05       		.uleb128 0x5
- 288 0137 03       		.byte	0x3
- 289 0138 00000000 		.4byte	.LC0
- 290 013c 00       		.byte	0
- 291 013d 0D       		.uleb128 0xd
- 292 013e 1C000000 		.4byte	.LVL3
- 293 0142 87020000 		.4byte	0x287
- 294 0146 52010000 		.4byte	0x152
- 295 014a 0E       		.uleb128 0xe
- 296 014b 01       		.uleb128 0x1
- 297 014c 50       		.byte	0x50
- 298 014d 03       		.uleb128 0x3
- 299 014e 0A       		.byte	0xa
- 300 014f D007     		.2byte	0x7d0
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 7
+ 243 013e 18000000 		.4byte	.LVL3
+ 244 0142 AE010000 		.4byte	0x1ae
+ 245 0146 0D       		.uleb128 0xd
+ 246 0147 1E000000 		.4byte	.LVL4
+ 247 014b B9010000 		.4byte	0x1b9
+ 248 014f 5A010000 		.4byte	0x15a
+ 249 0153 0E       		.uleb128 0xe
+ 250 0154 01       		.uleb128 0x1
+ 251 0155 50       		.byte	0x50
+ 252 0156 02       		.uleb128 0x2
+ 253 0157 08       		.byte	0x8
+ 254 0158 64       		.byte	0x64
+ 255 0159 00       		.byte	0
+ 256 015a 0F       		.uleb128 0xf
+ 257 015b 24000000 		.4byte	.LVL5
+ 258 015f C4010000 		.4byte	0x1c4
+ 259 0163 0E       		.uleb128 0xe
+ 260 0164 01       		.uleb128 0x1
+ 261 0165 50       		.byte	0x50
+ 262 0166 02       		.uleb128 0x2
+ 263 0167 09       		.byte	0x9
+ 264 0168 CA       		.byte	0xca
+ 265 0169 00       		.byte	0
+ 266 016a 00       		.byte	0
+ 267 016b 10       		.uleb128 0x10
+ 268 016c DA000000 		.4byte	.LASF18
+ 269 0170 08       		.byte	0x8
+ 270 0171 1207     		.2byte	0x712
+ 271 0173 77010000 		.4byte	0x177
+ 272 0177 11       		.uleb128 0x11
+ 273 0178 76000000 		.4byte	0x76
+ 274 017c 12       		.uleb128 0x12
+ 275 017d 75696400 		.ascii	"uid\000"
+ 276 0181 04       		.byte	0x4
+ 277 0182 40       		.byte	0x40
+ 278 0183 E1000000 		.4byte	0xe1
+ 279 0187 05       		.uleb128 0x5
+ 280 0188 03       		.byte	0x3
+ 281 0189 00000000 		.4byte	uid
+ 282 018d 13       		.uleb128 0x13
+ 283 018e 18000000 		.4byte	.LASF19
+ 284 0192 18000000 		.4byte	.LASF19
+ 285 0196 05       		.byte	0x5
+ 286 0197 38       		.byte	0x38
+ 287 0198 13       		.uleb128 0x13
+ 288 0199 3F010000 		.4byte	.LASF20
+ 289 019d 3F010000 		.4byte	.LASF20
+ 290 01a1 05       		.byte	0x5
+ 291 01a2 3D       		.byte	0x3d
+ 292 01a3 13       		.uleb128 0x13
+ 293 01a4 01010000 		.4byte	.LASF21
+ 294 01a8 01010000 		.4byte	.LASF21
+ 295 01ac 05       		.byte	0x5
+ 296 01ad 3C       		.byte	0x3c
+ 297 01ae 13       		.uleb128 0x13
+ 298 01af E9010000 		.4byte	.LASF22
+ 299 01b3 E9010000 		.4byte	.LASF22
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 7
 
 
- 301 0151 00       		.byte	0
- 302 0152 0D       		.uleb128 0xd
- 303 0153 24000000 		.4byte	.LVL4
- 304 0157 71020000 		.4byte	0x271
- 305 015b 6A010000 		.4byte	0x16a
- 306 015f 0E       		.uleb128 0xe
- 307 0160 01       		.uleb128 0x1
- 308 0161 50       		.byte	0x50
- 309 0162 01       		.uleb128 0x1
- 310 0163 30       		.byte	0x30
- 311 0164 0E       		.uleb128 0xe
- 312 0165 01       		.uleb128 0x1
- 313 0166 51       		.byte	0x51
- 314 0167 01       		.uleb128 0x1
- 315 0168 30       		.byte	0x30
- 316 0169 00       		.byte	0
- 317 016a 0D       		.uleb128 0xd
- 318 016b 2A000000 		.4byte	.LVL5
- 319 016f 7C020000 		.4byte	0x27c
- 320 0173 81010000 		.4byte	0x181
- 321 0177 0E       		.uleb128 0xe
- 322 0178 01       		.uleb128 0x1
- 323 0179 50       		.byte	0x50
- 324 017a 05       		.uleb128 0x5
- 325 017b 03       		.byte	0x3
- 326 017c 08000000 		.4byte	.LC1
- 327 0180 00       		.byte	0
- 328 0181 0C       		.uleb128 0xc
- 329 0182 2E000000 		.4byte	.LVL6
- 330 0186 92020000 		.4byte	0x292
- 331 018a 0D       		.uleb128 0xd
- 332 018b 36000000 		.4byte	.LVL7
- 333 018f 71020000 		.4byte	0x271
- 334 0193 A2010000 		.4byte	0x1a2
- 335 0197 0E       		.uleb128 0xe
- 336 0198 01       		.uleb128 0x1
- 337 0199 50       		.byte	0x50
- 338 019a 01       		.uleb128 0x1
- 339 019b 30       		.byte	0x30
- 340 019c 0E       		.uleb128 0xe
- 341 019d 01       		.uleb128 0x1
- 342 019e 51       		.byte	0x51
- 343 019f 01       		.uleb128 0x1
- 344 01a0 30       		.byte	0x30
- 345 01a1 00       		.byte	0
- 346 01a2 0D       		.uleb128 0xd
- 347 01a3 3C000000 		.4byte	.LVL8
- 348 01a7 7C020000 		.4byte	0x27c
- 349 01ab B9010000 		.4byte	0x1b9
- 350 01af 0E       		.uleb128 0xe
- 351 01b0 01       		.uleb128 0x1
- 352 01b1 50       		.byte	0x50
- 353 01b2 05       		.uleb128 0x5
- 354 01b3 03       		.byte	0x3
- 355 01b4 10000000 		.4byte	.LC2
- 356 01b8 00       		.byte	0
- 357 01b9 0D       		.uleb128 0xd
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 8
+ 300 01b7 06       		.byte	0x6
+ 301 01b8 4D       		.byte	0x4d
+ 302 01b9 13       		.uleb128 0x13
+ 303 01ba 11010000 		.4byte	.LASF23
+ 304 01be 11010000 		.4byte	.LASF23
+ 305 01c2 07       		.byte	0x7
+ 306 01c3 77       		.byte	0x77
+ 307 01c4 13       		.uleb128 0x13
+ 308 01c5 81010000 		.4byte	.LASF24
+ 309 01c9 81010000 		.4byte	.LASF24
+ 310 01cd 06       		.byte	0x6
+ 311 01ce 5E       		.byte	0x5e
+ 312 01cf 00       		.byte	0
+ 313              		.section	.debug_abbrev,"",%progbits
+ 314              	.Ldebug_abbrev0:
+ 315 0000 01       		.uleb128 0x1
+ 316 0001 11       		.uleb128 0x11
+ 317 0002 01       		.byte	0x1
+ 318 0003 25       		.uleb128 0x25
+ 319 0004 0E       		.uleb128 0xe
+ 320 0005 13       		.uleb128 0x13
+ 321 0006 0B       		.uleb128 0xb
+ 322 0007 03       		.uleb128 0x3
+ 323 0008 0E       		.uleb128 0xe
+ 324 0009 1B       		.uleb128 0x1b
+ 325 000a 0E       		.uleb128 0xe
+ 326 000b 55       		.uleb128 0x55
+ 327 000c 17       		.uleb128 0x17
+ 328 000d 11       		.uleb128 0x11
+ 329 000e 01       		.uleb128 0x1
+ 330 000f 10       		.uleb128 0x10
+ 331 0010 17       		.uleb128 0x17
+ 332 0011 00       		.byte	0
+ 333 0012 00       		.byte	0
+ 334 0013 02       		.uleb128 0x2
+ 335 0014 24       		.uleb128 0x24
+ 336 0015 00       		.byte	0
+ 337 0016 0B       		.uleb128 0xb
+ 338 0017 0B       		.uleb128 0xb
+ 339 0018 3E       		.uleb128 0x3e
+ 340 0019 0B       		.uleb128 0xb
+ 341 001a 03       		.uleb128 0x3
+ 342 001b 0E       		.uleb128 0xe
+ 343 001c 00       		.byte	0
+ 344 001d 00       		.byte	0
+ 345 001e 03       		.uleb128 0x3
+ 346 001f 16       		.uleb128 0x16
+ 347 0020 00       		.byte	0
+ 348 0021 03       		.uleb128 0x3
+ 349 0022 0E       		.uleb128 0xe
+ 350 0023 3A       		.uleb128 0x3a
+ 351 0024 0B       		.uleb128 0xb
+ 352 0025 3B       		.uleb128 0x3b
+ 353 0026 0B       		.uleb128 0xb
+ 354 0027 49       		.uleb128 0x49
+ 355 0028 13       		.uleb128 0x13
+ 356 0029 00       		.byte	0
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 8
 
 
- 358 01ba 44000000 		.4byte	.LVL9
- 359 01be 71020000 		.4byte	0x271
- 360 01c2 D1010000 		.4byte	0x1d1
- 361 01c6 0E       		.uleb128 0xe
- 362 01c7 01       		.uleb128 0x1
- 363 01c8 50       		.byte	0x50
- 364 01c9 01       		.uleb128 0x1
- 365 01ca 31       		.byte	0x31
- 366 01cb 0E       		.uleb128 0xe
- 367 01cc 01       		.uleb128 0x1
- 368 01cd 51       		.byte	0x51
- 369 01ce 01       		.uleb128 0x1
- 370 01cf 30       		.byte	0x30
- 371 01d0 00       		.byte	0
- 372 01d1 0D       		.uleb128 0xd
- 373 01d2 4A000000 		.4byte	.LVL10
- 374 01d6 9D020000 		.4byte	0x29d
- 375 01da E5010000 		.4byte	0x1e5
- 376 01de 0E       		.uleb128 0xe
- 377 01df 01       		.uleb128 0x1
- 378 01e0 50       		.byte	0x50
- 379 01e1 02       		.uleb128 0x2
- 380 01e2 08       		.byte	0x8
- 381 01e3 37       		.byte	0x37
- 382 01e4 00       		.byte	0
- 383 01e5 0C       		.uleb128 0xc
- 384 01e6 4E000000 		.4byte	.LVL11
- 385 01ea A8020000 		.4byte	0x2a8
- 386 01ee 0D       		.uleb128 0xd
- 387 01ef 56000000 		.4byte	.LVL12
- 388 01f3 87020000 		.4byte	0x287
- 389 01f7 03020000 		.4byte	0x203
- 390 01fb 0E       		.uleb128 0xe
- 391 01fc 01       		.uleb128 0x1
- 392 01fd 50       		.byte	0x50
- 393 01fe 03       		.uleb128 0x3
- 394 01ff 0A       		.byte	0xa
- 395 0200 D007     		.2byte	0x7d0
- 396 0202 00       		.byte	0
- 397 0203 0D       		.uleb128 0xd
- 398 0204 5E000000 		.4byte	.LVL13
- 399 0208 71020000 		.4byte	0x271
- 400 020c 1B020000 		.4byte	0x21b
- 401 0210 0E       		.uleb128 0xe
- 402 0211 01       		.uleb128 0x1
- 403 0212 50       		.byte	0x50
- 404 0213 01       		.uleb128 0x1
- 405 0214 31       		.byte	0x31
- 406 0215 0E       		.uleb128 0xe
- 407 0216 01       		.uleb128 0x1
- 408 0217 51       		.byte	0x51
- 409 0218 01       		.uleb128 0x1
- 410 0219 30       		.byte	0x30
- 411 021a 00       		.byte	0
- 412 021b 0D       		.uleb128 0xd
- 413 021c 64000000 		.4byte	.LVL14
- 414 0220 7C020000 		.4byte	0x27c
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 9
+ 357 002a 00       		.byte	0
+ 358 002b 04       		.uleb128 0x4
+ 359 002c 24       		.uleb128 0x24
+ 360 002d 00       		.byte	0
+ 361 002e 0B       		.uleb128 0xb
+ 362 002f 0B       		.uleb128 0xb
+ 363 0030 3E       		.uleb128 0x3e
+ 364 0031 0B       		.uleb128 0xb
+ 365 0032 03       		.uleb128 0x3
+ 366 0033 08       		.uleb128 0x8
+ 367 0034 00       		.byte	0
+ 368 0035 00       		.byte	0
+ 369 0036 05       		.uleb128 0x5
+ 370 0037 13       		.uleb128 0x13
+ 371 0038 01       		.byte	0x1
+ 372 0039 0B       		.uleb128 0xb
+ 373 003a 0B       		.uleb128 0xb
+ 374 003b 3A       		.uleb128 0x3a
+ 375 003c 0B       		.uleb128 0xb
+ 376 003d 3B       		.uleb128 0x3b
+ 377 003e 0B       		.uleb128 0xb
+ 378 003f 01       		.uleb128 0x1
+ 379 0040 13       		.uleb128 0x13
+ 380 0041 00       		.byte	0
+ 381 0042 00       		.byte	0
+ 382 0043 06       		.uleb128 0x6
+ 383 0044 0D       		.uleb128 0xd
+ 384 0045 00       		.byte	0
+ 385 0046 03       		.uleb128 0x3
+ 386 0047 0E       		.uleb128 0xe
+ 387 0048 3A       		.uleb128 0x3a
+ 388 0049 0B       		.uleb128 0xb
+ 389 004a 3B       		.uleb128 0x3b
+ 390 004b 0B       		.uleb128 0xb
+ 391 004c 49       		.uleb128 0x49
+ 392 004d 13       		.uleb128 0x13
+ 393 004e 38       		.uleb128 0x38
+ 394 004f 0B       		.uleb128 0xb
+ 395 0050 00       		.byte	0
+ 396 0051 00       		.byte	0
+ 397 0052 07       		.uleb128 0x7
+ 398 0053 0D       		.uleb128 0xd
+ 399 0054 00       		.byte	0
+ 400 0055 03       		.uleb128 0x3
+ 401 0056 08       		.uleb128 0x8
+ 402 0057 3A       		.uleb128 0x3a
+ 403 0058 0B       		.uleb128 0xb
+ 404 0059 3B       		.uleb128 0x3b
+ 405 005a 0B       		.uleb128 0xb
+ 406 005b 49       		.uleb128 0x49
+ 407 005c 13       		.uleb128 0x13
+ 408 005d 38       		.uleb128 0x38
+ 409 005e 0B       		.uleb128 0xb
+ 410 005f 00       		.byte	0
+ 411 0060 00       		.byte	0
+ 412 0061 08       		.uleb128 0x8
+ 413 0062 01       		.uleb128 0x1
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 9
 
 
- 415 0224 32020000 		.4byte	0x232
- 416 0228 0E       		.uleb128 0xe
- 417 0229 01       		.uleb128 0x1
- 418 022a 50       		.byte	0x50
- 419 022b 05       		.uleb128 0x5
- 420 022c 03       		.byte	0x3
- 421 022d 08000000 		.4byte	.LC1
- 422 0231 00       		.byte	0
- 423 0232 0F       		.uleb128 0xf
- 424 0233 6C000000 		.4byte	.LVL15
- 425 0237 87020000 		.4byte	0x287
- 426 023b 0E       		.uleb128 0xe
- 427 023c 01       		.uleb128 0x1
- 428 023d 50       		.byte	0x50
- 429 023e 03       		.uleb128 0x3
- 430 023f 0A       		.byte	0xa
- 431 0240 D007     		.2byte	0x7d0
- 432 0242 00       		.byte	0
- 433 0243 00       		.byte	0
- 434 0244 10       		.uleb128 0x10
- 435 0245 DA000000 		.4byte	.LASF18
- 436 0249 07       		.byte	0x7
- 437 024a 1207     		.2byte	0x712
- 438 024c 50020000 		.4byte	0x250
- 439 0250 11       		.uleb128 0x11
- 440 0251 76000000 		.4byte	0x76
- 441 0255 12       		.uleb128 0x12
- 442 0256 75696400 		.ascii	"uid\000"
- 443 025a 04       		.byte	0x4
- 444 025b 40       		.byte	0x40
- 445 025c E1000000 		.4byte	0xe1
- 446 0260 05       		.uleb128 0x5
- 447 0261 03       		.byte	0x3
- 448 0262 00000000 		.4byte	uid
- 449 0266 13       		.uleb128 0x13
- 450 0267 18000000 		.4byte	.LASF19
- 451 026b 18000000 		.4byte	.LASF19
- 452 026f 05       		.byte	0x5
- 453 0270 38       		.byte	0x38
- 454 0271 13       		.uleb128 0x13
- 455 0272 4C010000 		.4byte	.LASF20
- 456 0276 4C010000 		.4byte	.LASF20
- 457 027a 05       		.byte	0x5
- 458 027b 3D       		.byte	0x3d
- 459 027c 13       		.uleb128 0x13
- 460 027d 0A010000 		.4byte	.LASF21
- 461 0281 0A010000 		.4byte	.LASF21
- 462 0285 05       		.byte	0x5
- 463 0286 3C       		.byte	0x3c
- 464 0287 13       		.uleb128 0x13
- 465 0288 F7010000 		.4byte	.LASF22
- 466 028c F7010000 		.4byte	.LASF22
- 467 0290 06       		.byte	0x6
- 468 0291 76       		.byte	0x76
- 469 0292 13       		.uleb128 0x13
- 470 0293 FC000000 		.4byte	.LASF23
- 471 0297 FC000000 		.4byte	.LASF23
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 10
+ 414 0063 01       		.byte	0x1
+ 415 0064 49       		.uleb128 0x49
+ 416 0065 13       		.uleb128 0x13
+ 417 0066 01       		.uleb128 0x1
+ 418 0067 13       		.uleb128 0x13
+ 419 0068 00       		.byte	0
+ 420 0069 00       		.byte	0
+ 421 006a 09       		.uleb128 0x9
+ 422 006b 21       		.uleb128 0x21
+ 423 006c 00       		.byte	0
+ 424 006d 49       		.uleb128 0x49
+ 425 006e 13       		.uleb128 0x13
+ 426 006f 2F       		.uleb128 0x2f
+ 427 0070 0B       		.uleb128 0xb
+ 428 0071 00       		.byte	0
+ 429 0072 00       		.byte	0
+ 430 0073 0A       		.uleb128 0xa
+ 431 0074 16       		.uleb128 0x16
+ 432 0075 00       		.byte	0
+ 433 0076 03       		.uleb128 0x3
+ 434 0077 08       		.uleb128 0x8
+ 435 0078 3A       		.uleb128 0x3a
+ 436 0079 0B       		.uleb128 0xb
+ 437 007a 3B       		.uleb128 0x3b
+ 438 007b 0B       		.uleb128 0xb
+ 439 007c 49       		.uleb128 0x49
+ 440 007d 13       		.uleb128 0x13
+ 441 007e 00       		.byte	0
+ 442 007f 00       		.byte	0
+ 443 0080 0B       		.uleb128 0xb
+ 444 0081 2E       		.uleb128 0x2e
+ 445 0082 01       		.byte	0x1
+ 446 0083 3F       		.uleb128 0x3f
+ 447 0084 19       		.uleb128 0x19
+ 448 0085 03       		.uleb128 0x3
+ 449 0086 0E       		.uleb128 0xe
+ 450 0087 3A       		.uleb128 0x3a
+ 451 0088 0B       		.uleb128 0xb
+ 452 0089 3B       		.uleb128 0x3b
+ 453 008a 0B       		.uleb128 0xb
+ 454 008b 27       		.uleb128 0x27
+ 455 008c 19       		.uleb128 0x19
+ 456 008d 49       		.uleb128 0x49
+ 457 008e 13       		.uleb128 0x13
+ 458 008f 8701     		.uleb128 0x87
+ 459 0091 19       		.uleb128 0x19
+ 460 0092 11       		.uleb128 0x11
+ 461 0093 01       		.uleb128 0x1
+ 462 0094 12       		.uleb128 0x12
+ 463 0095 06       		.uleb128 0x6
+ 464 0096 40       		.uleb128 0x40
+ 465 0097 18       		.uleb128 0x18
+ 466 0098 9742     		.uleb128 0x2117
+ 467 009a 19       		.uleb128 0x19
+ 468 009b 01       		.uleb128 0x1
+ 469 009c 13       		.uleb128 0x13
+ 470 009d 00       		.byte	0
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 10
 
 
- 472 029b 04       		.byte	0x4
- 473 029c E6       		.byte	0xe6
- 474 029d 13       		.uleb128 0x13
- 475 029e 78010000 		.4byte	.LASF24
- 476 02a2 78010000 		.4byte	.LASF24
- 477 02a6 04       		.byte	0x4
- 478 02a7 D6       		.byte	0xd6
- 479 02a8 13       		.uleb128 0x13
- 480 02a9 3E010000 		.4byte	.LASF25
- 481 02ad 3E010000 		.4byte	.LASF25
- 482 02b1 05       		.byte	0x5
- 483 02b2 5D       		.byte	0x5d
- 484 02b3 00       		.byte	0
- 485              		.section	.debug_abbrev,"",%progbits
- 486              	.Ldebug_abbrev0:
- 487 0000 01       		.uleb128 0x1
- 488 0001 11       		.uleb128 0x11
- 489 0002 01       		.byte	0x1
- 490 0003 25       		.uleb128 0x25
- 491 0004 0E       		.uleb128 0xe
- 492 0005 13       		.uleb128 0x13
- 493 0006 0B       		.uleb128 0xb
- 494 0007 03       		.uleb128 0x3
- 495 0008 0E       		.uleb128 0xe
- 496 0009 1B       		.uleb128 0x1b
- 497 000a 0E       		.uleb128 0xe
- 498 000b 55       		.uleb128 0x55
- 499 000c 17       		.uleb128 0x17
- 500 000d 11       		.uleb128 0x11
- 501 000e 01       		.uleb128 0x1
- 502 000f 10       		.uleb128 0x10
- 503 0010 17       		.uleb128 0x17
- 504 0011 00       		.byte	0
- 505 0012 00       		.byte	0
- 506 0013 02       		.uleb128 0x2
- 507 0014 24       		.uleb128 0x24
- 508 0015 00       		.byte	0
- 509 0016 0B       		.uleb128 0xb
- 510 0017 0B       		.uleb128 0xb
- 511 0018 3E       		.uleb128 0x3e
- 512 0019 0B       		.uleb128 0xb
- 513 001a 03       		.uleb128 0x3
- 514 001b 0E       		.uleb128 0xe
- 515 001c 00       		.byte	0
- 516 001d 00       		.byte	0
- 517 001e 03       		.uleb128 0x3
- 518 001f 16       		.uleb128 0x16
- 519 0020 00       		.byte	0
- 520 0021 03       		.uleb128 0x3
- 521 0022 0E       		.uleb128 0xe
- 522 0023 3A       		.uleb128 0x3a
- 523 0024 0B       		.uleb128 0xb
- 524 0025 3B       		.uleb128 0x3b
- 525 0026 0B       		.uleb128 0xb
- 526 0027 49       		.uleb128 0x49
- 527 0028 13       		.uleb128 0x13
- 528 0029 00       		.byte	0
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 11
+ 471 009e 00       		.byte	0
+ 472 009f 0C       		.uleb128 0xc
+ 473 00a0 898201   		.uleb128 0x4109
+ 474 00a3 00       		.byte	0
+ 475 00a4 11       		.uleb128 0x11
+ 476 00a5 01       		.uleb128 0x1
+ 477 00a6 31       		.uleb128 0x31
+ 478 00a7 13       		.uleb128 0x13
+ 479 00a8 00       		.byte	0
+ 480 00a9 00       		.byte	0
+ 481 00aa 0D       		.uleb128 0xd
+ 482 00ab 898201   		.uleb128 0x4109
+ 483 00ae 01       		.byte	0x1
+ 484 00af 11       		.uleb128 0x11
+ 485 00b0 01       		.uleb128 0x1
+ 486 00b1 31       		.uleb128 0x31
+ 487 00b2 13       		.uleb128 0x13
+ 488 00b3 01       		.uleb128 0x1
+ 489 00b4 13       		.uleb128 0x13
+ 490 00b5 00       		.byte	0
+ 491 00b6 00       		.byte	0
+ 492 00b7 0E       		.uleb128 0xe
+ 493 00b8 8A8201   		.uleb128 0x410a
+ 494 00bb 00       		.byte	0
+ 495 00bc 02       		.uleb128 0x2
+ 496 00bd 18       		.uleb128 0x18
+ 497 00be 9142     		.uleb128 0x2111
+ 498 00c0 18       		.uleb128 0x18
+ 499 00c1 00       		.byte	0
+ 500 00c2 00       		.byte	0
+ 501 00c3 0F       		.uleb128 0xf
+ 502 00c4 898201   		.uleb128 0x4109
+ 503 00c7 01       		.byte	0x1
+ 504 00c8 11       		.uleb128 0x11
+ 505 00c9 01       		.uleb128 0x1
+ 506 00ca 31       		.uleb128 0x31
+ 507 00cb 13       		.uleb128 0x13
+ 508 00cc 00       		.byte	0
+ 509 00cd 00       		.byte	0
+ 510 00ce 10       		.uleb128 0x10
+ 511 00cf 34       		.uleb128 0x34
+ 512 00d0 00       		.byte	0
+ 513 00d1 03       		.uleb128 0x3
+ 514 00d2 0E       		.uleb128 0xe
+ 515 00d3 3A       		.uleb128 0x3a
+ 516 00d4 0B       		.uleb128 0xb
+ 517 00d5 3B       		.uleb128 0x3b
+ 518 00d6 05       		.uleb128 0x5
+ 519 00d7 49       		.uleb128 0x49
+ 520 00d8 13       		.uleb128 0x13
+ 521 00d9 3F       		.uleb128 0x3f
+ 522 00da 19       		.uleb128 0x19
+ 523 00db 3C       		.uleb128 0x3c
+ 524 00dc 19       		.uleb128 0x19
+ 525 00dd 00       		.byte	0
+ 526 00de 00       		.byte	0
+ 527 00df 11       		.uleb128 0x11
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 11
 
 
- 529 002a 00       		.byte	0
- 530 002b 04       		.uleb128 0x4
- 531 002c 24       		.uleb128 0x24
- 532 002d 00       		.byte	0
- 533 002e 0B       		.uleb128 0xb
- 534 002f 0B       		.uleb128 0xb
- 535 0030 3E       		.uleb128 0x3e
- 536 0031 0B       		.uleb128 0xb
- 537 0032 03       		.uleb128 0x3
- 538 0033 08       		.uleb128 0x8
- 539 0034 00       		.byte	0
- 540 0035 00       		.byte	0
- 541 0036 05       		.uleb128 0x5
- 542 0037 13       		.uleb128 0x13
- 543 0038 01       		.byte	0x1
- 544 0039 0B       		.uleb128 0xb
- 545 003a 0B       		.uleb128 0xb
- 546 003b 3A       		.uleb128 0x3a
- 547 003c 0B       		.uleb128 0xb
- 548 003d 3B       		.uleb128 0x3b
- 549 003e 0B       		.uleb128 0xb
- 550 003f 01       		.uleb128 0x1
- 551 0040 13       		.uleb128 0x13
- 552 0041 00       		.byte	0
- 553 0042 00       		.byte	0
- 554 0043 06       		.uleb128 0x6
- 555 0044 0D       		.uleb128 0xd
- 556 0045 00       		.byte	0
- 557 0046 03       		.uleb128 0x3
- 558 0047 0E       		.uleb128 0xe
- 559 0048 3A       		.uleb128 0x3a
- 560 0049 0B       		.uleb128 0xb
- 561 004a 3B       		.uleb128 0x3b
- 562 004b 0B       		.uleb128 0xb
- 563 004c 49       		.uleb128 0x49
- 564 004d 13       		.uleb128 0x13
- 565 004e 38       		.uleb128 0x38
- 566 004f 0B       		.uleb128 0xb
- 567 0050 00       		.byte	0
- 568 0051 00       		.byte	0
- 569 0052 07       		.uleb128 0x7
- 570 0053 0D       		.uleb128 0xd
- 571 0054 00       		.byte	0
- 572 0055 03       		.uleb128 0x3
- 573 0056 08       		.uleb128 0x8
- 574 0057 3A       		.uleb128 0x3a
- 575 0058 0B       		.uleb128 0xb
- 576 0059 3B       		.uleb128 0x3b
- 577 005a 0B       		.uleb128 0xb
- 578 005b 49       		.uleb128 0x49
- 579 005c 13       		.uleb128 0x13
- 580 005d 38       		.uleb128 0x38
- 581 005e 0B       		.uleb128 0xb
- 582 005f 00       		.byte	0
- 583 0060 00       		.byte	0
- 584 0061 08       		.uleb128 0x8
- 585 0062 01       		.uleb128 0x1
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 12
+ 528 00e0 35       		.uleb128 0x35
+ 529 00e1 00       		.byte	0
+ 530 00e2 49       		.uleb128 0x49
+ 531 00e3 13       		.uleb128 0x13
+ 532 00e4 00       		.byte	0
+ 533 00e5 00       		.byte	0
+ 534 00e6 12       		.uleb128 0x12
+ 535 00e7 34       		.uleb128 0x34
+ 536 00e8 00       		.byte	0
+ 537 00e9 03       		.uleb128 0x3
+ 538 00ea 08       		.uleb128 0x8
+ 539 00eb 3A       		.uleb128 0x3a
+ 540 00ec 0B       		.uleb128 0xb
+ 541 00ed 3B       		.uleb128 0x3b
+ 542 00ee 0B       		.uleb128 0xb
+ 543 00ef 49       		.uleb128 0x49
+ 544 00f0 13       		.uleb128 0x13
+ 545 00f1 3F       		.uleb128 0x3f
+ 546 00f2 19       		.uleb128 0x19
+ 547 00f3 02       		.uleb128 0x2
+ 548 00f4 18       		.uleb128 0x18
+ 549 00f5 00       		.byte	0
+ 550 00f6 00       		.byte	0
+ 551 00f7 13       		.uleb128 0x13
+ 552 00f8 2E       		.uleb128 0x2e
+ 553 00f9 00       		.byte	0
+ 554 00fa 3F       		.uleb128 0x3f
+ 555 00fb 19       		.uleb128 0x19
+ 556 00fc 3C       		.uleb128 0x3c
+ 557 00fd 19       		.uleb128 0x19
+ 558 00fe 6E       		.uleb128 0x6e
+ 559 00ff 0E       		.uleb128 0xe
+ 560 0100 03       		.uleb128 0x3
+ 561 0101 0E       		.uleb128 0xe
+ 562 0102 3A       		.uleb128 0x3a
+ 563 0103 0B       		.uleb128 0xb
+ 564 0104 3B       		.uleb128 0x3b
+ 565 0105 0B       		.uleb128 0xb
+ 566 0106 00       		.byte	0
+ 567 0107 00       		.byte	0
+ 568 0108 00       		.byte	0
+ 569              		.section	.debug_aranges,"",%progbits
+ 570 0000 1C000000 		.4byte	0x1c
+ 571 0004 0200     		.2byte	0x2
+ 572 0006 00000000 		.4byte	.Ldebug_info0
+ 573 000a 04       		.byte	0x4
+ 574 000b 00       		.byte	0
+ 575 000c 0000     		.2byte	0
+ 576 000e 0000     		.2byte	0
+ 577 0010 00000000 		.4byte	.LFB64
+ 578 0014 2C000000 		.4byte	.LFE64-.LFB64
+ 579 0018 00000000 		.4byte	0
+ 580 001c 00000000 		.4byte	0
+ 581              		.section	.debug_ranges,"",%progbits
+ 582              	.Ldebug_ranges0:
+ 583 0000 00000000 		.4byte	.LFB64
+ 584 0004 2C000000 		.4byte	.LFE64
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 12
 
 
- 586 0063 01       		.byte	0x1
- 587 0064 49       		.uleb128 0x49
- 588 0065 13       		.uleb128 0x13
- 589 0066 01       		.uleb128 0x1
- 590 0067 13       		.uleb128 0x13
- 591 0068 00       		.byte	0
- 592 0069 00       		.byte	0
- 593 006a 09       		.uleb128 0x9
- 594 006b 21       		.uleb128 0x21
- 595 006c 00       		.byte	0
- 596 006d 49       		.uleb128 0x49
- 597 006e 13       		.uleb128 0x13
- 598 006f 2F       		.uleb128 0x2f
- 599 0070 0B       		.uleb128 0xb
- 600 0071 00       		.byte	0
- 601 0072 00       		.byte	0
- 602 0073 0A       		.uleb128 0xa
- 603 0074 16       		.uleb128 0x16
- 604 0075 00       		.byte	0
- 605 0076 03       		.uleb128 0x3
- 606 0077 08       		.uleb128 0x8
- 607 0078 3A       		.uleb128 0x3a
- 608 0079 0B       		.uleb128 0xb
- 609 007a 3B       		.uleb128 0x3b
- 610 007b 0B       		.uleb128 0xb
- 611 007c 49       		.uleb128 0x49
- 612 007d 13       		.uleb128 0x13
- 613 007e 00       		.byte	0
- 614 007f 00       		.byte	0
- 615 0080 0B       		.uleb128 0xb
- 616 0081 2E       		.uleb128 0x2e
- 617 0082 01       		.byte	0x1
- 618 0083 3F       		.uleb128 0x3f
- 619 0084 19       		.uleb128 0x19
- 620 0085 03       		.uleb128 0x3
- 621 0086 0E       		.uleb128 0xe
- 622 0087 3A       		.uleb128 0x3a
- 623 0088 0B       		.uleb128 0xb
- 624 0089 3B       		.uleb128 0x3b
- 625 008a 0B       		.uleb128 0xb
- 626 008b 27       		.uleb128 0x27
- 627 008c 19       		.uleb128 0x19
- 628 008d 49       		.uleb128 0x49
- 629 008e 13       		.uleb128 0x13
- 630 008f 8701     		.uleb128 0x87
- 631 0091 19       		.uleb128 0x19
- 632 0092 11       		.uleb128 0x11
- 633 0093 01       		.uleb128 0x1
- 634 0094 12       		.uleb128 0x12
- 635 0095 06       		.uleb128 0x6
- 636 0096 40       		.uleb128 0x40
- 637 0097 18       		.uleb128 0x18
- 638 0098 9742     		.uleb128 0x2117
- 639 009a 19       		.uleb128 0x19
- 640 009b 01       		.uleb128 0x1
- 641 009c 13       		.uleb128 0x13
- 642 009d 00       		.byte	0
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 13
+ 585 0008 00000000 		.4byte	0
+ 586 000c 00000000 		.4byte	0
+ 587              		.section	.debug_line,"",%progbits
+ 588              	.Ldebug_line0:
+ 589 0000 8C010000 		.section	.debug_str,"MS",%progbits,1
+ 589      02006701 
+ 589      00000201 
+ 589      FB0E0D00 
+ 589      01010101 
+ 590              	.LASF17:
+ 591 0000 75696442 		.ascii	"uidByte\000"
+ 591      79746500 
+ 592              	.LASF9:
+ 593 0008 5F5F696E 		.ascii	"__int32_t\000"
+ 593      7433325F 
+ 593      7400
+ 594              	.LASF11:
+ 595 0012 666C6F61 		.ascii	"float\000"
+ 595      7400
+ 596              	.LASF19:
+ 597 0018 4C43445F 		.ascii	"LCD_Start\000"
+ 597      53746172 
+ 597      7400
+ 598              	.LASF16:
+ 599 0022 73697A65 		.ascii	"size\000"
+ 599      00
+ 600              	.LASF25:
+ 601 0027 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 601      43313120 
+ 601      352E342E 
+ 601      31203230 
+ 601      31363036 
+ 602 005a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 602      20726576 
+ 602      6973696F 
+ 602      6E203233 
+ 602      37373135 
+ 603 008d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 603      66756E63 
+ 603      74696F6E 
+ 603      2D736563 
+ 603      74696F6E 
+ 604              	.LASF5:
+ 605 00b5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 605      20756E73 
+ 605      69676E65 
+ 605      6420696E 
+ 605      7400
+ 606              	.LASF3:
+ 607 00c7 73686F72 		.ascii	"short unsigned int\000"
+ 607      7420756E 
+ 607      7369676E 
+ 607      65642069 
+ 607      6E7400
+ 608              	.LASF18:
+ 609 00da 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 609      52784275 
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 13
 
 
- 643 009e 00       		.byte	0
- 644 009f 0C       		.uleb128 0xc
- 645 00a0 898201   		.uleb128 0x4109
- 646 00a3 00       		.byte	0
- 647 00a4 11       		.uleb128 0x11
- 648 00a5 01       		.uleb128 0x1
- 649 00a6 31       		.uleb128 0x31
- 650 00a7 13       		.uleb128 0x13
- 651 00a8 00       		.byte	0
- 652 00a9 00       		.byte	0
- 653 00aa 0D       		.uleb128 0xd
- 654 00ab 898201   		.uleb128 0x4109
- 655 00ae 01       		.byte	0x1
- 656 00af 11       		.uleb128 0x11
- 657 00b0 01       		.uleb128 0x1
- 658 00b1 31       		.uleb128 0x31
- 659 00b2 13       		.uleb128 0x13
- 660 00b3 01       		.uleb128 0x1
- 661 00b4 13       		.uleb128 0x13
- 662 00b5 00       		.byte	0
- 663 00b6 00       		.byte	0
- 664 00b7 0E       		.uleb128 0xe
- 665 00b8 8A8201   		.uleb128 0x410a
- 666 00bb 00       		.byte	0
- 667 00bc 02       		.uleb128 0x2
- 668 00bd 18       		.uleb128 0x18
- 669 00be 9142     		.uleb128 0x2111
- 670 00c0 18       		.uleb128 0x18
- 671 00c1 00       		.byte	0
- 672 00c2 00       		.byte	0
- 673 00c3 0F       		.uleb128 0xf
- 674 00c4 898201   		.uleb128 0x4109
- 675 00c7 01       		.byte	0x1
- 676 00c8 11       		.uleb128 0x11
- 677 00c9 01       		.uleb128 0x1
- 678 00ca 31       		.uleb128 0x31
- 679 00cb 13       		.uleb128 0x13
- 680 00cc 00       		.byte	0
- 681 00cd 00       		.byte	0
- 682 00ce 10       		.uleb128 0x10
- 683 00cf 34       		.uleb128 0x34
- 684 00d0 00       		.byte	0
- 685 00d1 03       		.uleb128 0x3
- 686 00d2 0E       		.uleb128 0xe
- 687 00d3 3A       		.uleb128 0x3a
- 688 00d4 0B       		.uleb128 0xb
- 689 00d5 3B       		.uleb128 0x3b
- 690 00d6 05       		.uleb128 0x5
- 691 00d7 49       		.uleb128 0x49
- 692 00d8 13       		.uleb128 0x13
- 693 00d9 3F       		.uleb128 0x3f
- 694 00da 19       		.uleb128 0x19
- 695 00db 3C       		.uleb128 0x3c
- 696 00dc 19       		.uleb128 0x19
- 697 00dd 00       		.byte	0
- 698 00de 00       		.byte	0
- 699 00df 11       		.uleb128 0x11
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 14
+ 609      66666572 
+ 609      00
+ 610              	.LASF1:
+ 611 00e7 756E7369 		.ascii	"unsigned char\000"
+ 611      676E6564 
+ 611      20636861 
+ 611      7200
+ 612              	.LASF12:
+ 613 00f5 646F7562 		.ascii	"double\000"
+ 613      6C6500
+ 614              	.LASF28:
+ 615 00fc 6D61696E 		.ascii	"main\000"
+ 615      00
+ 616              	.LASF21:
+ 617 0101 4C43445F 		.ascii	"LCD_PrintString\000"
+ 617      5072696E 
+ 617      74537472 
+ 617      696E6700 
+ 618              	.LASF23:
+ 619 0111 43794465 		.ascii	"CyDelayUs\000"
+ 619      6C617955 
+ 619      7300
+ 620              	.LASF8:
+ 621 011b 756E7369 		.ascii	"unsigned int\000"
+ 621      676E6564 
+ 621      20696E74 
+ 621      00
+ 622              	.LASF7:
+ 623 0128 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 623      206C6F6E 
+ 623      6720756E 
+ 623      7369676E 
+ 623      65642069 
+ 624              	.LASF20:
+ 625 013f 4C43445F 		.ascii	"LCD_Position\000"
+ 625      506F7369 
+ 625      74696F6E 
+ 625      00
+ 626              	.LASF10:
+ 627 014c 696E7433 		.ascii	"int32_t\000"
+ 627      325F7400 
+ 628              	.LASF15:
+ 629 0154 73697A65 		.ascii	"sizetype\000"
+ 629      74797065 
+ 629      00
+ 630              	.LASF6:
+ 631 015d 6C6F6E67 		.ascii	"long long int\000"
+ 631      206C6F6E 
+ 631      6720696E 
+ 631      7400
+ 632              	.LASF26:
+ 633 016b 6D61696E 		.ascii	"main.c\000"
+ 633      2E6300
+ 634              	.LASF13:
+ 635 0172 63686172 		.ascii	"char\000"
+ 635      00
+ 636              	.LASF2:
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\cclWKFiW.s 			page 14
 
 
- 700 00e0 35       		.uleb128 0x35
- 701 00e1 00       		.byte	0
- 702 00e2 49       		.uleb128 0x49
- 703 00e3 13       		.uleb128 0x13
- 704 00e4 00       		.byte	0
- 705 00e5 00       		.byte	0
- 706 00e6 12       		.uleb128 0x12
- 707 00e7 34       		.uleb128 0x34
- 708 00e8 00       		.byte	0
- 709 00e9 03       		.uleb128 0x3
- 710 00ea 08       		.uleb128 0x8
- 711 00eb 3A       		.uleb128 0x3a
- 712 00ec 0B       		.uleb128 0xb
- 713 00ed 3B       		.uleb128 0x3b
- 714 00ee 0B       		.uleb128 0xb
- 715 00ef 49       		.uleb128 0x49
- 716 00f0 13       		.uleb128 0x13
- 717 00f1 3F       		.uleb128 0x3f
- 718 00f2 19       		.uleb128 0x19
- 719 00f3 02       		.uleb128 0x2
- 720 00f4 18       		.uleb128 0x18
- 721 00f5 00       		.byte	0
- 722 00f6 00       		.byte	0
- 723 00f7 13       		.uleb128 0x13
- 724 00f8 2E       		.uleb128 0x2e
- 725 00f9 00       		.byte	0
- 726 00fa 3F       		.uleb128 0x3f
- 727 00fb 19       		.uleb128 0x19
- 728 00fc 3C       		.uleb128 0x3c
- 729 00fd 19       		.uleb128 0x19
- 730 00fe 6E       		.uleb128 0x6e
- 731 00ff 0E       		.uleb128 0xe
- 732 0100 03       		.uleb128 0x3
- 733 0101 0E       		.uleb128 0xe
- 734 0102 3A       		.uleb128 0x3a
- 735 0103 0B       		.uleb128 0xb
- 736 0104 3B       		.uleb128 0x3b
- 737 0105 0B       		.uleb128 0xb
- 738 0106 00       		.byte	0
- 739 0107 00       		.byte	0
- 740 0108 00       		.byte	0
- 741              		.section	.debug_aranges,"",%progbits
- 742 0000 1C000000 		.4byte	0x1c
- 743 0004 0200     		.2byte	0x2
- 744 0006 00000000 		.4byte	.Ldebug_info0
- 745 000a 04       		.byte	0x4
- 746 000b 00       		.byte	0
- 747 000c 0000     		.2byte	0
- 748 000e 0000     		.2byte	0
- 749 0010 00000000 		.4byte	.LFB64
- 750 0014 7C000000 		.4byte	.LFE64-.LFB64
- 751 0018 00000000 		.4byte	0
- 752 001c 00000000 		.4byte	0
- 753              		.section	.debug_ranges,"",%progbits
- 754              	.Ldebug_ranges0:
- 755 0000 00000000 		.4byte	.LFB64
- 756 0004 7C000000 		.4byte	.LFE64
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 15
-
-
- 757 0008 00000000 		.4byte	0
- 758 000c 00000000 		.4byte	0
- 759              		.section	.debug_line,"",%progbits
- 760              	.Ldebug_line0:
- 761 0000 A2010000 		.section	.debug_str,"MS",%progbits,1
- 761      02005E01 
- 761      00000201 
- 761      FB0E0D00 
- 761      01010101 
- 762              	.LASF17:
- 763 0000 75696442 		.ascii	"uidByte\000"
- 763      79746500 
- 764              	.LASF9:
- 765 0008 5F5F696E 		.ascii	"__int32_t\000"
- 765      7433325F 
- 765      7400
- 766              	.LASF11:
- 767 0012 666C6F61 		.ascii	"float\000"
- 767      7400
- 768              	.LASF19:
- 769 0018 4C43445F 		.ascii	"LCD_Start\000"
- 769      53746172 
- 769      7400
- 770              	.LASF16:
- 771 0022 73697A65 		.ascii	"size\000"
- 771      00
- 772              	.LASF26:
- 773 0027 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 773      43313120 
- 773      352E342E 
- 773      31203230 
- 773      31363036 
- 774 005a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 774      20726576 
- 774      6973696F 
- 774      6E203233 
- 774      37373135 
- 775 008d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 775      66756E63 
- 775      74696F6E 
- 775      2D736563 
- 775      74696F6E 
- 776              	.LASF5:
- 777 00b5 6C6F6E67 		.ascii	"long unsigned int\000"
- 777      20756E73 
- 777      69676E65 
- 777      6420696E 
- 777      7400
- 778              	.LASF3:
- 779 00c7 73686F72 		.ascii	"short unsigned int\000"
- 779      7420756E 
- 779      7369676E 
- 779      65642069 
- 779      6E7400
- 780              	.LASF18:
- 781 00da 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 781      52784275 
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 16
-
-
- 781      66666572 
- 781      00
- 782              	.LASF1:
- 783 00e7 756E7369 		.ascii	"unsigned char\000"
- 783      676E6564 
- 783      20636861 
- 783      7200
- 784              	.LASF12:
- 785 00f5 646F7562 		.ascii	"double\000"
- 785      6C6500
- 786              	.LASF23:
- 787 00fc 5043445F 		.ascii	"PCD_Init\000"
- 787      496E6974 
- 787      00
- 788              	.LASF29:
- 789 0105 6D61696E 		.ascii	"main\000"
- 789      00
- 790              	.LASF21:
- 791 010a 4C43445F 		.ascii	"LCD_PrintString\000"
- 791      5072696E 
- 791      74537472 
- 791      696E6700 
- 792              	.LASF8:
- 793 011a 756E7369 		.ascii	"unsigned int\000"
- 793      676E6564 
- 793      20696E74 
- 793      00
- 794              	.LASF7:
- 795 0127 6C6F6E67 		.ascii	"long long unsigned int\000"
- 795      206C6F6E 
- 795      6720756E 
- 795      7369676E 
- 795      65642069 
- 796              	.LASF25:
- 797 013e 4C43445F 		.ascii	"LCD_PrintInt8\000"
- 797      5072696E 
- 797      74496E74 
- 797      3800
- 798              	.LASF20:
- 799 014c 4C43445F 		.ascii	"LCD_Position\000"
- 799      506F7369 
- 799      74696F6E 
- 799      00
- 800              	.LASF10:
- 801 0159 696E7433 		.ascii	"int32_t\000"
- 801      325F7400 
- 802              	.LASF15:
- 803 0161 73697A65 		.ascii	"sizetype\000"
- 803      74797065 
- 803      00
- 804              	.LASF6:
- 805 016a 6C6F6E67 		.ascii	"long long int\000"
- 805      206C6F6E 
- 805      6720696E 
- 805      7400
- 806              	.LASF24:
- 807 0178 5043445F 		.ascii	"PCD_ReadRegister\000"
-ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccA19zRA.s 			page 17
-
-
- 807      52656164 
- 807      52656769 
- 807      73746572 
- 807      00
- 808              	.LASF27:
- 809 0189 6D61696E 		.ascii	"main.c\000"
- 809      2E6300
- 810              	.LASF13:
- 811 0190 63686172 		.ascii	"char\000"
- 811      00
- 812              	.LASF2:
- 813 0195 73686F72 		.ascii	"short int\000"
- 813      7420696E 
- 813      7400
- 814              	.LASF4:
- 815 019f 6C6F6E67 		.ascii	"long int\000"
- 815      20696E74 
- 815      00
- 816              	.LASF28:
- 817 01a8 433A5C55 		.ascii	"C:\\Users\\nikod\\Documents\\PSoC Creator\\RC522\\R"
- 817      73657273 
- 817      5C6E696B 
- 817      6F645C44 
- 817      6F63756D 
- 818 01d5 4649442E 		.ascii	"FID.cydsn\000"
- 818      63796473 
- 818      6E00
- 819              	.LASF14:
- 820 01df 6C6F6E67 		.ascii	"long double\000"
- 820      20646F75 
- 820      626C6500 
- 821              	.LASF0:
- 822 01eb 7369676E 		.ascii	"signed char\000"
- 822      65642063 
- 822      68617200 
- 823              	.LASF22:
- 824 01f7 43794465 		.ascii	"CyDelay\000"
- 824      6C617900 
- 825              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 637 0177 73686F72 		.ascii	"short int\000"
+ 637      7420696E 
+ 637      7400
+ 638              	.LASF24:
+ 639 0181 5350495F 		.ascii	"SPI_WriteTxData\000"
+ 639      57726974 
+ 639      65547844 
+ 639      61746100 
+ 640              	.LASF4:
+ 641 0191 6C6F6E67 		.ascii	"long int\000"
+ 641      20696E74 
+ 641      00
+ 642              	.LASF27:
+ 643 019a 433A5C55 		.ascii	"C:\\Users\\nikod\\Documents\\PSoC Creator\\RC522\\R"
+ 643      73657273 
+ 643      5C6E696B 
+ 643      6F645C44 
+ 643      6F63756D 
+ 644 01c7 4649442E 		.ascii	"FID.cydsn\000"
+ 644      63796473 
+ 644      6E00
+ 645              	.LASF14:
+ 646 01d1 6C6F6E67 		.ascii	"long double\000"
+ 646      20646F75 
+ 646      626C6500 
+ 647              	.LASF0:
+ 648 01dd 7369676E 		.ascii	"signed char\000"
+ 648      65642063 
+ 648      68617200 
+ 649              	.LASF22:
+ 650 01e9 5350495F 		.ascii	"SPI_Start\000"
+ 650      53746172 
+ 650      7400
+ 651              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

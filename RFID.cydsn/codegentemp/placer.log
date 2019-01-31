@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Jan 19 2019 00:14:36
+#File Generated:     Jan 31 2019 13:46:54
 
 #Purpose:            
 
@@ -144,7 +144,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
-Clock: SPI_IntClock         | Frequency:  77.2 MHz | Target:   0.2 MHz
+Clock: SPI_IntClock         | Frequency:  76.1 MHz | Target:   0.2 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -155,5 +155,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.2 sec.
+I2076: Total run-time: 1.5 sec.
 
